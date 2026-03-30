@@ -37,11 +37,11 @@ export default function HomePage() {
           </p>
           
           <div className="contact_strip">
-             <a href="tel:4252979880" className="contact_link">
-               <FaPhoneAlt className="me-1" /> (425) 297-9880
+             <a href="tel:4252879880" className="contact_link">
+               <FaPhoneAlt className="me-1" /> (425) 287-9880
              </a>
              <span className="divider">|</span>
-             <a href="mailto:sidharthsharmainfo@gmail.com" className="contact_link">
+             <a href="mailto:sidharathsharmainfo@gmail.com" className="contact_link">
                <FaEnvelope className="me-1" /> Email
              </a>
              <span className="divider">|</span>
