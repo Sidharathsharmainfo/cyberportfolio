@@ -1,0 +1,124 @@
+/* Modal Overrides */
+.cyber-modal .modal-content {
+  background: transparent;
+  border: none;
+}
+
+.modal-content-wrapper {
+  background: #080808;
+  border: 1px solid #222;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Header */
+.modal-header-cyber {
+  background: #111;
+  border-bottom: 1px solid #222;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.close-x {
+  background: none;
+  border: none;
+  color: #555;
+  transition: 0.3s;
+}
+
+.close-x:hover { color: #fff; transform: rotate(90deg); }
+
+/* Body & Inputs */
+.modal-body-cyber { padding: 30px 40px; }
+
+.cyber-label {
+  font-size: 0.7rem;
+  color: #555;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+}
+
+.cyber-input {
+  background: #0f0f0f !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+  font-size: 0.9rem;
+  padding: 12px 15px !important;
+  transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+  border-color: #444 !important;
+  background: #151515 !important;
+  box-shadow: none !important;
+}
+
+.cyber-input::placeholder { color: #333; }
+
+/* Captcha Section */
+.captcha-section {
+  background: #0c0c0c;
+  padding: 15px;
+  border: 1px dashed #222;
+  border-radius: 4px;
+}
+
+.q-text { color: #fff; font-family: monospace; font-size: 1rem; margin-left: 10px; }
+
+/* Status Text */
+.status-terminal {
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  border-left: 2px solid #fff;
+  padding-left: 10px;
+}
+
+/* Buttons */
+.btn-container { margin-top: 10px; }
+
+.cyber-btn-primary {
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  color: #000;
+  border: none;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cyber-btn-primary:hover {
+  transform: scale(1.02);
+  background: #f0f0f0;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.cyber-btn-primary:active { transform: scale(0.98); }
+
+/* Mobile */
+@media (max-width: 576px) {
+  .modal-body-cyber { padding: 20px; }
+  .header-title span { display: none; } /* Hide text on small mobiles */
+}

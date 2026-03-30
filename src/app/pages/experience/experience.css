@@ -1,0 +1,77 @@
+#experience-projects { background-color: #000; overflow: hidden; }
+
+.section-label {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  color: #888;
+  border-left: 3px solid #fff;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.custom-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+}
+
+/* Arrows */
+.carousel-arrows { display: flex; gap: 10px; }
+.arrow-btn {
+  background: #111; border: 1px solid #333; color: #fff;
+  width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+  border-radius: 4px; transition: 0.3s; cursor: pointer;
+}
+.arrow-btn:hover { background: #fff; color: #000; }
+
+/* Experience Cards */
+.experience-carousel {
+  display: flex; gap: 20px; overflow-x: auto; padding: 20px 0; scrollbar-width: none;
+}
+.experience-carousel::-webkit-scrollbar { display: none; }
+
+.exp-card {
+  min-width: 320px; flex: 0 0 auto; background: #0a0a0a;
+  border: 1px solid #1a1a1a; padding: 30px; border-radius: 4px;
+  cursor: pointer; transition: 0.3s ease;
+}
+
+.exp-date { color: #555; font-size: 0.75rem; margin-bottom: 10px; display: block; }
+.exp-role { font-size: 1.15rem; font-weight: 600; color: #fff; margin-bottom: 5px; }
+.exp-company { color: #888; font-size: 0.9rem; margin-bottom: 15px; }
+.exp-desc { color: #666; font-size: 0.85rem; line-height: 1.5; }
+.view-more { background: none; border: none; color: #444; font-size: 0.8rem; margin-top: 15px; text-decoration: underline; padding: 0; transition: 0.3s; }
+.exp-card:hover .view-more { color: #fff; }
+
+/* White Project Cards */
+.project-card-v2 {
+  background: #fff; color: #000; padding: 35px; border-radius: 4px;
+  height: 100%; cursor: pointer; display: flex; flex-direction: column;
+}
+.p-card-icon {
+  font-size: 1.5rem; margin-bottom: 20px; background: #f0f0f0;
+  width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 4px;
+}
+.project-card-v2 h4 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+.project-card-v2 p { font-size: 0.9rem; color: #444; flex-grow: 1; }
+.view-more-dark { font-size: 0.8rem; font-weight: 800; margin-top: 20px; display: block; text-transform: uppercase; }
+
+/* Pagination & Modal */
+.pag-dot {
+  background: transparent; border: 1px solid #333; color: #555;
+  width: 35px; height: 35px; margin: 0 5px; border-radius: 4px; transition: 0.3s;
+}
+.pag-dot.active { background: #fff; color: #000; border-color: #fff; }
+
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px;
+}
+.modal-content-custom {
+  background: #0a0a0a; border: 1px solid #222; padding: 50px;
+  max-width: 800px; width: 100%; border-radius: 4px; position: relative; max-height: 90vh; overflow-y: auto;
+}
+.modal-list { list-style: none; padding: 0; }
+.modal-list li { position: relative; padding-left: 25px; margin-bottom: 15px; font-size: 0.95rem; color: #bbb; line-height: 1.6; }
+.modal-list li::before { content: "—"; position: absolute; left: 0; color: #fff; }
+.close-btn { position: absolute; top: 20px; right: 20px; background: none; border: none; color: #555; font-size: 1.5rem; cursor: pointer; }
+.close-btn:hover { color: #fff; }

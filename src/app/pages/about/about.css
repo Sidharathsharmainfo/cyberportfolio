@@ -1,0 +1,189 @@
+#about {
+
+    background: white;
+    color: black;
+    padding: 80px 30px;
+}
+
+.text-box {
+    max-width: 100%;
+    text-align: justify;
+}
+
+.text-box h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.text-box h2::after {
+    content: '';
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+.text-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.text-box strong {
+    font-size: 18px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-box {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid black;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.image-box:hover {
+    transform: scale(1.03);
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about {
+        padding: 60px 20px;
+    }
+    .text-box h2 {
+        font-size: 28px;
+    }
+    .text-box p, .text-box strong {
+        font-size: 16px;
+    }
+    .image-box {
+        border: 2px solid black;
+        background-color: #000;
+    overflow: hidden;
+    }
+}
+
+/* Consistent Section Divider */
+.custom-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #333, transparent);
+}
+
+/* Heading Style Matched with Experience/Education */
+.section-label {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: #888;
+    border-left: 3px solid #fff;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    font-size: 0.85rem;
+    color: #555;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Professional Summary Layout */
+.summary-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.image-box {
+    flex-shrink: 0;
+    border: 1px solid #222;
+    padding: 8px;
+    background: #0a0a0a;
+    border-radius: 4px;
+}
+
+.author-image {
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+.author-image:hover {
+    filter: grayscale(0%);
+}
+
+.text-box p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+/* Skills List Layout (Clean minimalist lines) */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #1a1a1a;
+    font-size: 0.9rem;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+.skills-list li:hover {
+    color: #fff;
+}
+
+.skills-list li strong {
+    color: #eee;
+    margin-right: 12px;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 100px; /* Aligns the values */
+}
+
+/* Responsive Fixes */
+@media (max-width: 991px) {
+    .summary-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .image-box {
+        margin-bottom: 25px;
+    }
+
+    .skills-wrapper {
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px solid #1a1a1a;
+    }
+}
+

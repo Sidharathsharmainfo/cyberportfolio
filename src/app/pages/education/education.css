@@ -1,0 +1,151 @@
+#education-certification {
+  background-color: #000;
+  padding: 60px 0;
+}
+
+/* Section Divider Consistency */
+.custom-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+}
+
+.section-label {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  color: #888;
+  border-left: 3px solid #fff;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+/* Education Items */
+.edu-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.inst-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  max-width: 80%;
+  margin: 0;
+}
+
+.edu-date {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.degree-name {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* Certifications Styling */
+.cert-item-v2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #1a1a1a;
+  min-height: 85px;
+}
+
+.cert-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cert-icon-mini {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.cert-title-v2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  color: #eee;
+}
+
+.cert-org-v2 {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+.cert-date-v2 {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+/* Pagination Controls */
+.cert-pagination {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pag-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #888;
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.pag-btn:hover:not(:disabled) {
+  border-color: #fff;
+  color: #fff;
+}
+
+.pag-btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-size: 0.8rem;
+  color: #444;
+}
+
+/* Layout Utilities */
+.border-left-divider {
+  border-left: 1px solid #1a1a1a;
+}
+
+.resume-download-btn {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 30px;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .border-left-divider {
+    border-left: none;
+    border-top: 1px solid #1a1a1a;
+    margin-top: 20px;
+    padding-top: 40px;
+  }
+  
+  .cert-item-v2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

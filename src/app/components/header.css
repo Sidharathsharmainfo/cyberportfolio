@@ -1,0 +1,67 @@
+/* Navbar Styles */
+.navbar-custom {
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Very faint line like image */
+}
+
+.navbar-custom.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 12px 0;
+  backdrop-filter: blur(10px);
+}
+
+/* Brand Name - Minimalist */
+.brand-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white !important;
+  letter-spacing: 0.5px;
+}
+
+/* Nav Links */
+.nav-links .nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.85rem; /* Smaller, cleaner text as per image */
+  font-weight: 400;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links .nav-link:hover {
+  color: #fff !important;
+}
+
+/* Active/Hover Underline effect like the image "Home" link */
+.nav-links .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-links .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #111;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  
+  .nav-links .nav-link {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+}

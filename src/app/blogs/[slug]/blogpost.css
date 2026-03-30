@@ -1,0 +1,141 @@
+
+.blog-container {
+  margin-top: 50px;
+}
+
+.blog-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 40px;
+  background: #ffffff;
+  text-align: left;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 1.3;
+}
+
+.blog-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.blog-content p {
+  margin-bottom: 20px;
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.social-share-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.share-button {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.share-button:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.navigation-buttons .me-2 {
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .blog-title {
+    font-size: 2.2rem;
+  }
+
+  .blog-content {
+    font-size: 1.05rem;
+  }
+
+  .share-button {
+    font-size: 1.05rem;
+    padding: 9px 18px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation-buttons .me-2 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .blog-content {
+    font-size: 1rem;
+  }
+
+  .share-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .navigation-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .blog-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-title {
+    font-size: 1.8rem;
+  }
+
+  .blog-content {
+    font-size: 0.95rem;
+  }
+
+  .share-button {
+    font-size: 0.95rem;
+    padding: 7px 15px;
+  }
+
+  .blog-card {
+    padding: 15px;
+  }
+}

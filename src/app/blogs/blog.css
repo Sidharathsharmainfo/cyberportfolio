@@ -1,0 +1,117 @@
+/* ---- Blog Section ---- */
+#blogs {
+  padding: 60px 10%;
+  background: #f8f9fa;
+  text-align: left; /* Text left-aligned */
+}
+
+/* ---- Centered Heading ---- */
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold; /* Heading bold */
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, #ff9800, #e91e63);
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* ---- Blog Container ---- */
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- Blog Card Styling ---- */
+.blogCard {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: left; /* Text left-aligned */
+}
+
+.blogCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.blogTitle {
+  font-size: 1.5rem;
+  font-weight: bold; /* Title bold */
+  color: #333;
+  margin: 15px 0;
+}
+
+.blogDescription {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: normal; /* Description normal */
+}
+
+/* ---- Blog Button ---- */
+.blogButton {
+  background-color: black !important; /* Button color black */
+  border: none;
+  color: white !important; /* Text color white */
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.blogButton:hover {
+  background-color: #333 !important; /* Hover color dark gray */
+  color: white !important; /* Text color remains white */
+  transform: translateY(-2px);
+}
+
+/* ---- Responsive Design ---- */
+@media (max-width: 992px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  #blogs{
+    padding: 40px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogTitle {
+    font-size: 1.3rem;
+  }
+
+  .blogDescription {
+    font-size: 0.9rem;
+  }
+
+  .blogButton {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
