@@ -2,12 +2,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react";
 
-import { Headernavbar } from "./components/header";
-import { HomePage } from "./pages/home/page";
-import { AboutSection } from "./pages/about/page";
+import  { Headernavbar } from "./components/header";
+import HomePage from "./home/page";
+import AboutSection from "./about/page";
+import ExperienceAndProjectsSection from "./experience/page";
+import EducationCertifications from "./education/page";
 // import { SkillsSection } from "./pages/skills/page";
-import { ExperienceAndProjectsSection } from "./pages/experience/page";
-import { EducationCertifications } from "./pages/education/page";
 // import BlogSection from "./blogs/page";
 
 import { Footer } from "./components/footer";

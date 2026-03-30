@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-export const AboutSection = () => {
+export default function AboutSection(){
     return (
         <section id="about" className="bg-black text-white py-5">
             <Container>
@@ -83,4 +83,3 @@ export const AboutSection = () => {
         </section>
     );
 };
-export default AboutPage;

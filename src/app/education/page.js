@@ -11,7 +11,7 @@ const allCertifications = [
   { title: "Cisco Introduction to Cybersecurity", org: "CISCO", date: "May 2025" },
 ];
 
-export const EducationCertifications = () => {
+export default function EducationCertifications() {
   const [currentPage, setCurrentPage] = useState(1);
   const certsPerPage = 3;
 

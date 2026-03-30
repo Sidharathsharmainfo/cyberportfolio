@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaUniversity, FaGithub } from "react-icons/fa";
 import "./home.css";
 
-export const HomePage = () => {
+export default function HomePage() {
   return (
     <main id="home">
       <motion.div
