@@ -207,3 +207,4 @@ export const ExperienceAndProjectsSection = () => {
     </section>
   );
 };
+export default ExperienceAndProjectsSection;
