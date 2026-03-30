@@ -52,8 +52,9 @@ export default function Home() {
       <ExperienceAndProjectsSection />
       <EducationCertifications />
       <Footer /> 
+      {/* <SkillsSection />
       <BlogSection />
-      
+       */}
     </div>
   );
 }
