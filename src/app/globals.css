@@ -142,3 +142,6 @@ body {
   50% { text-shadow: -2px -2px blue; }
   100% { text-shadow: 2px 2px red; }
 }
+.preloader-logo, .loader-symbol { 
+    display: none !important; 
+}
