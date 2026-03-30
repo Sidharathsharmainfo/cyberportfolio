@@ -44,7 +44,7 @@ export const Footer = () => {
               <a href="mailto:sidharathsharmainfo@gmail.com" title="Email Me">
                 <FaEnvelope />
               </a>
-              <a href="https://www.linkedin.com/in/sidharath-sharma-b945a2156/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+              <a href="https://www.linkedin.com/in/sidharathsharmainfo" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
                 <FaLinkedinIn />
               </a>
             </div>
