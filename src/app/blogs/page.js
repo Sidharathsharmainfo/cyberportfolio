@@ -59,8 +59,7 @@ const BlogList = () => {
     <>
      <section id="blogs" className="blog-section">
         <Container>
-           {/* Divider above section to separate from previous content */}
-      <div className="custom-divider my-5"></div>
+          <div className="custom-divider my-5"></div>
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
