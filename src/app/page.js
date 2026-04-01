@@ -8,7 +8,7 @@ import AboutSection from "./about/page";
 import ExperienceAndProjectsSection from "./experience/page";
 import EducationCertifications from "./education/page";
 // import { SkillsSection } from "./pages/skills/page";
-// import BlogSection from "./blogs/page";
+import BlogSection from "./blogs/page";
 
 import { Footer } from "./components/footer";
 
@@ -51,10 +51,11 @@ export default function Home() {
       <AboutSection />
       <ExperienceAndProjectsSection />
       <EducationCertifications />
-      <Footer /> 
-      {/* <SkillsSection />
       <BlogSection />
-       */}
+      <Footer /> 
+      {/* <SkillsSection /> */}
+      
+      
     </div>
   );
 }

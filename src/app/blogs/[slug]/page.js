@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { Container, Row, Col, Button, Card } from "react-bootstrap";
-import { FaTwitter, FaFacebook } from "react-icons/fa";
+import { Container, Row, Col, Button, Card, Spinner } from "react-bootstrap";
+import { FaTwitter, FaFacebook, FaChevronLeft, FaChevronRight, FaArrowLeft } from "react-icons/fa";
 import "./blogpost.css";
 
+// Blog Data (Keep this same as your list)
 const blogPosts = [
   {
     slug: "introduction-to-cybersecurity",
@@ -72,13 +73,63 @@ const blogPosts = [
       <p><strong>Next time, we’ll dive deeper into how hackers think and how ethical hacking can make you a better developer. Stay tuned!</strong></p>
     `,
   },
+  {
+    slug: "networking-basics-lan-vlan",
+    title: "Networking 101: Why You Need LAN & VLANs",
+    description: "Understanding the building blocks of a secure network and why flat networks are a security risk.",
+    date: "April 05, 2026",
+    content: `
+      <p>Imagine a large office where everyone is shouting in one room. It's chaotic, right? That’s exactly what a <strong>Flat Network (LAN)</strong> without segmentation looks like. In cybersecurity, we don't just build networks; we secure them.</p>
+
+      <h3>What is a LAN?</h3>
+      <p>A <strong>Local Area Network (LAN)</strong> connects devices in a limited area like your home or office. It allows them to share files, printers, and internet. But there's a problem: if one device is hacked, the hacker can easily move "laterally" to any other device on that LAN.</p>
+
+      <h3>Why do we need VLANs?</h3>
+      <p><strong>Virtual Local Area Networks (VLANs)</strong> allow us to split one physical switch into multiple logical networks. Here’s why they are essential:</p>
+      <ul>
+        <li><strong>Security:</strong> You can separate the "Guest Wi-Fi" from the "HR Database." Even if a guest is compromised, they can't see the database.</li>
+        <li><strong>Performance:</strong> By reducing broadcast traffic, the network runs faster.</li>
+        <li><strong>Organization:</strong> You can group users by department (Finance, IT, Sales) regardless of where they are sitting.</li>
+      </ul>
+
+      <p><strong>Pro Tip:</strong> As a security professional, always follow the principle of least privilege—only allow necessary VLANs to communicate through a firewall.</p>
+    `
+  },
+  {
+    slug: "iso-27001-basics-guide",
+    title: "ISO 27001: The Gold Standard for Information Security",
+    description: "A beginner's guide to understanding ISMS and why businesses are rushing to get certified.",
+    date: "April 10, 2026",
+    content: `
+      <p>If you've heard the term <strong>ISMS (Information Security Management System)</strong>, you've heard of ISO 27001. But what is it exactly, and why should you care?</p>
+
+      <h3>What is ISO 27001?</h3>
+      <p>ISO/IEC 27001 is an international standard that provides a framework for managing sensitive company information so that it remains secure. It’s not just about IT; it involves people, processes, and technology.</p>
+
+      <h3>Why do Companies need it?</h3>
+      <ul>
+        <li><strong>Trust:</strong> It proves to clients that you take their data seriously.</li>
+        <li><strong>Legal Compliance:</strong> Helps in meeting GDPR and other regulatory requirements.</li>
+        <li><strong>Risk Management:</strong> It forces you to identify vulnerabilities before they are exploited.</li>
+      </ul>
+
+      <h3>How to Implement it? (The Basics)</h3>
+      <ol>
+        <li><strong>Define Scope:</strong> Decide what needs protection (e.g., the whole company or just one department).</li>
+        <li><strong>Risk Assessment:</strong> Identify threats. What could go wrong?</li>
+        <li><strong>Implement Controls:</strong> Use Annex A controls (like Access Control, Cryptography, or Physical Security) to mitigate risks.</li>
+        <li><strong>Internal Audit:</strong> Check if your system is working as planned.</li>
+      </ol>
+
+      <p><strong>Conclusion:</strong> ISO 27001 isn't a one-time project; it's a cycle of continuous improvement (PDCA: Plan-Do-Check-Act).</p>
+    `
+  }
 ];
 
-
 const BlogPost = () => {
-  const [post, setPost] = useState(null);
   const { slug } = useParams();
   const router = useRouter();
+  const [post, setPost] = useState(null);
 
   const currentIndex = blogPosts.findIndex((p) => p.slug === slug);
 
@@ -86,82 +137,75 @@ const BlogPost = () => {
     if (slug) {
       const currentPost = blogPosts[currentIndex];
       setPost(currentPost || null);
+      window.scrollTo(0, 0); 
     }
-  }, [slug]);
+  }, [slug, currentIndex]);
 
-  if (!slug) return <div>Loading...</div>;
-  if (!post) return <div>Post not found!</div>;
-
-  const shareOnTwitter = () => {
-    window.open(`https://twitter.com/share?url=${window.location.href}&text=${post.title}`, "_blank");
-  };
-
-  const shareOnFacebook = () => {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, "_blank");
-  };
-
-  const handlePrevious = () => {
-    if (currentIndex === 0) {
-      router.push("/blogs");
-    } else {
-      router.push(`/blogs/${blogPosts[currentIndex - 1].slug}`);
-    }
-  };
-
-  const handleNext = () => {
-    if (currentIndex < blogPosts.length - 1) {
-      router.push(`/blogs/${blogPosts[currentIndex + 1].slug}`);
-    } else {
-      router.push("/blogs");
-    }
-  };
+  if (!post) return (
+    <div className="blog-post-wrapper d-flex justify-content-center align-items-center">
+      <Spinner animation="border" variant="light" />
+    </div>
+  );
 
   return (
-    <Container>
-      <Row className="blog-container">
-        <Col md={12}>
-          <Card className="blog-card">
-            <Card.Body>
-              <Card.Title className="blog-title">{post.title}</Card.Title>
-              <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }} />
-
-              <div className="social-share-buttons">
-                <Button className="share-button" variant="dark" onClick={shareOnTwitter}>
-                  <FaTwitter /> Share on Twitter
-                </Button>
-                <Button className="share-button" variant="dark" onClick={shareOnFacebook}>
-                  <FaFacebook /> Share on Facebook
-                </Button>
-              </div>
-
-              {/* Navigation Buttons */}
-              <div className="navigation-buttons mt-4">
-                <Button variant="secondary" onClick={() => router.push("/")} className="me-2">
-                  Back to Home
-                </Button>
-
-                <Button
-                  variant="secondary"
-                  onClick={handlePrevious}
-                  disabled={currentIndex === 0}
-                  className="me-2"
+    <div className="blog-post-wrapper">
+      <Container>
+        <Row className="justify-content-center">
+          <Col lg={10}>
+            <Card className="blog-post-card">
+              <Card.Body>
+                {/* 2. Back Button */}
+                <Button 
+                  variant="link" 
+                  className="p-0 mb-4 text-decoration-none text-secondary"
+                  onClick={() => router.push('/')}
                 >
-                  {currentIndex === 0 ? "Back to Blogs" : "← Previous"}
+                  <FaArrowLeft className="me-2" /> Back to Portfolio
                 </Button>
 
-                <Button
-                  variant="secondary"
-                  onClick={handleNext}
-                  disabled={currentIndex === blogPosts.length - 1}
-                >
-                  {currentIndex === blogPosts.length - 1 ? "Back to Blogs" : "Next →"}
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+                {/* 3. Title with Side Bar */}
+                <h1 className="blog-post-title">{post.title}</h1>
+                
+                {/* 4. Main Body */}
+                <div 
+                  className="blog-post-content" 
+                  dangerouslySetInnerHTML={{ __html: post.content }} 
+                />
+
+                {/* 5. Share Buttons */}
+                <div className="share-section">
+                  <Button className="cyber-btn-outline" onClick={() => window.open(`https://twitter.com/share?url=${window.location.href}`, "_blank")}>
+                    <FaTwitter className="me-2" /> Twitter
+                  </Button>
+                  <Button className="cyber-btn-outline" onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, "_blank")}>
+                    <FaFacebook className="me-2" /> Facebook
+                  </Button>
+                </div>
+
+                {/* 6. Navigation Controls */}
+                <div className="nav-controls">
+                  <Button 
+                    className="cyber-btn-outline" 
+                    disabled={currentIndex === 0}
+                    onClick={() => router.push(`/blogs/${blogPosts[currentIndex - 1]?.slug}`)}
+                  >
+                    <FaChevronLeft className="me-2" /> Prev
+                  </Button>
+
+                  <Button 
+                    className="cyber-btn-outline" 
+                    disabled={currentIndex === blogPosts.length - 1}
+                    onClick={() => router.push(`/blogs/${blogPosts[currentIndex + 1]?.slug}`)}
+                  >
+                    Next <FaChevronRight className="ms-2" />
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

@@ -1,117 +1,87 @@
-/* ---- Blog Section ---- */
-#blogs {
-  padding: 60px 10%;
-  background: #f8f9fa;
-  text-align: left; /* Text left-aligned */
+.blog-section {
+  padding: 50px 0;
+  background-color: #000;
 }
 
-/* ---- Centered Heading ---- */
+.custom-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+}
+
+
 .heading {
-  font-size: 2.5rem;
-  font-weight: bold; /* Heading bold */
-  color: #333;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  position: relative;
-  display: inline-block;
-  margin-bottom: 30px;
-  text-align: center;
+  font-weight: 700;
+  text-align: left;
   width: 100%;
-}
-
-.heading::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(to right, #ff9800, #e91e63);
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-
-/* ---- Blog Container ---- */
-.blogContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ---- Blog Card Styling ---- */
-.blogCard {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #ffffff;
-  overflow: hidden;
-  margin-bottom: 30px;
-  padding: 20px;
-  text-align: left; /* Text left-aligned */
-}
-
-.blogCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.blogTitle {
-  font-size: 1.5rem;
-  font-weight: bold; /* Title bold */
-  color: #333;
-  margin: 15px 0;
-}
-
-.blogDescription {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-weight: normal; /* Description normal */
-}
-
-/* ---- Blog Button ---- */
-.blogButton {
-  background-color: black !important; /* Button color black */
-  border: none;
-  color: white !important; /* Text color white */
-  font-size: 1rem;
-  padding: 10px 20px;
+  letter-spacing: 3px;
+  color: #888;
   text-transform: uppercase;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-left: 3px solid #fff;
+  padding-left: 15px;
+  font-size: 1.1rem;
 }
 
-.blogButton:hover {
-  background-color: #333 !important; /* Hover color dark gray */
-  color: white !important; /* Text color remains white */
-  transform: translateY(-2px);
+
+.cyber-blog-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  height: 100%;
 }
 
-/* ---- Responsive Design ---- */
-@media (max-width: 992px) {
-  .heading {
-    font-size: 2.2rem;
-  }
-
-  #blogs{
-    padding: 40px 5%;
-  }
+.cyber-blog-card:hover {
+  transform: translateY(-8px);
+  border-color: #fff;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
 }
 
-@media (max-width: 768px) {
-  .blogTitle {
-    font-size: 1.3rem;
-  }
-
-  .blogDescription {
-    font-size: 0.9rem;
-  }
-
-  .blogButton {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
+.blog-date {
+  color: #888;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
+
+.blog-card-title {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.blog-card-text {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.cyber-btn-sm {
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ---- Custom Pagination ---- */
+.custom-pagination .page-link {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #fff;
+  border-color: #fff;
+  color: #000;
+}
+
+.custom-pagination .page-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
