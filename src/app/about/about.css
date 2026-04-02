@@ -1,189 +1,108 @@
-#about {
+#about { background: #000; color: #fff; padding: 100px 0; }
 
-    background: white;
-    color: black;
-    padding: 80px 30px;
-}
+.section-label { font-size: 1rem; letter-spacing: 4px; color: #888; border-left: 3px solid #fff; padding-left: 15px; text-transform: uppercase; }
+.custom-divider { height: 1px; background: linear-gradient(90deg, transparent, #222, transparent); }
+.sub-title { font-size: 0.75rem; color: #444; letter-spacing: 2px; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; }
 
-.text-box {
-    max-width: 100%;
-    text-align: justify;
-}
+/* Left Side */
+.image-box { border: 1px solid #111; padding: 10px; background: #0a0a0a; border-radius: 4px; display: inline-block; }
+.author-image { filter: grayscale(100%); transition: 0.5s ease; border-radius: 2px; object-fit: cover; }
+.author-image:hover { filter: grayscale(0%); }
+.skills-cloud { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-start; }
+.skill-badge { background: #0a0a0a; border: 1px solid #1a1a1a; color: #666; padding: 6px 14px; font-size: 0.72rem; border-radius: 20px; transition: 0.3s; }
+.skill-badge:hover { border-color: #fff; color: #fff; }
 
-.text-box h2 {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
-}
+/* Right Side */
+.highlight-para { font-size: 1.15rem !important; color: #eee !important; border-left: 2px solid #fff; padding-left: 20px; margin-bottom: 25px !important; line-height: 1.6; }
+.summary-text p { font-size: 0.95rem; line-height: 1.8; color: #888; }
 
-.text-box h2::after {
-    content: '';
-    width: 70px;
-    height: 4px;
-    background: linear-gradient(90deg, #ff8a00, #e52e71);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 2px;
-}
+.hire-card { background: #0a0a0a; border: 1px solid #111; padding: 20px; height: 100%; display: flex; gap: 15px; border-radius: 4px; transition: 0.3s ease-in-out; }
+.hire-card:hover { border-color: #333; background: #0f0f0f; transform: translateY(-2px); }
+.hire-icon { font-size: 1.1rem; color: #fff; margin-top: 4px; flex-shrink: 0; }
+.hire-card h5 { font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; color: #fff; }
+.hire-card p { font-size: 0.78rem !important; color: #666 !important; line-height: 1.5; margin: 0 !important; }
 
-.text-box p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-}
+/* Footer & CTA Button */
+.status-footer { border-top: 1px solid #1a1a1a; }
+.status-info p { font-size: 0.85rem; color: #555; }
+.status-info strong { color: #aaa; }
+.connect-text { font-style: italic; color: #444; }
 
-.text-box strong {
-    font-size: 18px;
-}
-
-.image-container {
-    display: flex;
-    justify-content: center;
+.btn-connect-cta {
+    display: inline-flex;
     align-items: center;
-    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none !important;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
-.image-box {
-    border-radius: 12px;
-    overflow: hidden;
-    border: 3px solid black;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    position: relative;
+.btn-connect-cta:hover {
+    background-color: #fff;
+    color: #000;
 }
 
-.image-box:hover {
-    transform: scale(1.03);
-}
-
-.image-box img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #about {
-        padding: 60px 20px;
-    }
-    .text-box h2 {
-        font-size: 28px;
-    }
-    .text-box p, .text-box strong {
-        font-size: 16px;
-    }
-    .image-box {
-        border: 2px solid black;
-        background-color: #000;
-    overflow: hidden;
-    }
-}
-
-/* Consistent Section Divider */
-.custom-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #333, transparent);
-}
-
-/* Heading Style Matched with Experience/Education */
-.section-label {
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-    color: #888;
-    border-left: 3px solid #fff;
-    padding-left: 15px;
+.btn-connect-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    cursor: pointer;
     text-transform: uppercase;
 }
 
-.sub-title {
+.btn-connect-cta:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Status Info Text */
+.status-footer {
+    border-top: 1px solid #1a1a1a;
+}
+
+.status-info p {
     font-size: 0.85rem;
     color: #555;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-/* Professional Summary Layout */
-.summary-content {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-.image-box {
-    flex-shrink: 0;
-    border: 1px solid #222;
-    padding: 8px;
-    background: #0a0a0a;
-    border-radius: 4px;
-}
-
-.author-image {
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
-}
-
-.author-image:hover {
-    filter: grayscale(0%);
-}
-
-.text-box p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: #999;
-    margin-bottom: 20px;
-}
-
-/* Skills List Layout (Clean minimalist lines) */
-.skills-list {
-    list-style: none;
-    padding: 0;
     margin: 0;
 }
 
-.skills-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid #1a1a1a;
-    font-size: 0.9rem;
-    color: #777;
-    transition: color 0.3s ease;
+.connect-text {
+    font-style: italic;
+    color: #333;
 }
 
-.skills-list li:hover {
-    color: #fff;
+/* Ensure Modal doesn't clash with background */
+.cyber-modal .modal-content-wrapper {
+    border: 1px solid #222;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1);
 }
 
-.skills-list li strong {
-    color: #eee;
-    margin-right: 12px;
-    font-weight: 600;
-    display: inline-block;
-    min-width: 100px; /* Aligns the values */
+@media (max-width: 768px) {
+    .btn-connect-cta {
+        width: 100%;
+        justify-content: center;
+    }
 }
-
-/* Responsive Fixes */
 @media (max-width: 991px) {
-    .summary-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .image-box {
-        margin-bottom: 25px;
-    }
-
-    .skills-wrapper {
-        margin-top: 40px;
-        padding-top: 40px;
-        border-top: 1px solid #1a1a1a;
-    }
+    .ps-lg-5 { padding-left: 15px !important; }
+    .skills-cloud { justify-content: center; margin-bottom: 40px; }
+    .image-box-wrapper { text-align: center; }
+    .btn-connect-cta { width: 100%; justify-content: center; }
 }
-

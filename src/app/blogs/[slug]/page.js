@@ -8,6 +8,55 @@ import "./blogpost.css";
 // Blog Data (Keep this same as your list)
 const blogPosts = [
   {
+    slug: "iso-27001-implementation-guide",
+    title: "Step-by-Step ISO 27001:2022 Implementation Guide",
+    content: `
+      <p>ISO/IEC 27001:2022 is a globally recognized standard for <strong>Information Security Management Systems (ISMS)</strong>. It helps organizations protect sensitive data and manage security risks effectively.</p>
+      
+      <p>In this guide, I’ll walk you through a practical, step-by-step approach to implementing ISO 27001 based on my hands-on experience in the GRC domain.</p>
+
+      <div class="custom-divider my-4"></div>
+
+      <h3>Step 1: Define Scope</h3>
+      <p>Start by defining the boundary of your ISMS. You need to identify what exactly you are protecting:</p>
+      <ul>
+        <li>Which systems, teams, or physical locations are included?</li>
+        <li>What critical data needs protection (e.g., Customer PII, Intellectual Property)?</li>
+      </ul>
+      <p><em>Example: Cloud infrastructure, internal HR tools, and developer endpoints.</em></p>
+
+      <h3>Step 2: Risk Assessment & Treatment</h3>
+      <p>Identify risks that could impact the confidentiality, integrity, or availability of your data. For every risk (like Insider Threats or Data Breaches), create a <strong>Risk Register</strong>:</p>
+      <ul>
+        <li><strong>Impact & Likelihood:</strong> How bad is it and how likely is it?</li>
+        <li><strong>Mitigation Plan:</strong> How will you fix or reduce it?</li>
+      </ul>
+
+      <h3>Step 3: Select Controls (Annex A)</h3>
+      <p>Once risks are identified, map them to the <strong>ISO 27001 Annex A controls</strong>. These are categorized into Organizational, People, Physical, and Technological themes.</p>
+
+      <h3>Step 4: Implement Policies & Documentation</h3>
+      <p>Compliance is nothing without documentation. You must create and enforce:</p>
+      <ul>
+        <li>Access Control Policy</li>
+        <li>Information Security Policy</li>
+        <li>Incident Response Plan</li>
+      </ul>
+
+      <h3>Step 5: Evidence Collection & Automation</h3>
+      <p>Modern GRC involves using tools like <strong>Vanta</strong> or <strong>Drata</strong> to automate evidence collection. This ensures you are always "audit-ready" rather than rushing at the end of the year.</p>
+
+      <h3>Step 6: Internal Audit</h3>
+      <p>Before the external certification body arrives, conduct an internal audit. This helps identify gaps and ensures your controls are actually working as intended.</p>
+
+      <h3>Step 7: Continuous Monitoring (The PDCA Cycle)</h3>
+      <p>Security is not a destination; it's a journey. Follow the <strong>Plan-Do-Check-Act</strong> cycle to review risks regularly and update controls based on new threats.</p>
+
+      <div class="highlight-box mt-4 p-3" style="background: #111; border-left: 4px solid #fff;">
+        <p class="mb-0"><strong>Author's Note:</strong> In my experience as a Cybersecurity Auditor, I successfully reduced compliance gaps by <strong>30%</strong> by strictly following these phases and focusing on risk-driven controls.</p>
+      </div>`,
+  },
+  {
     slug: "introduction-to-cybersecurity",
     title: "Introduction to Cybersecurity: Why It Matters More Than Ever",
     content: `
@@ -28,8 +77,7 @@ const blogPosts = [
 
       <p>So, what does this mean for developers? How does it impact their day-to-day work? And, most importantly, how can we stay ahead of potential threats in this ever-evolving digital landscape?</p>
 
-      <p><strong>Stay tuned for the next blog to learn more!</strong></p>
-    `,
+      <p><strong>Stay tuned for the next blog to learn more!</strong></p>`,
   },
   {
     slug: "the-developer-who-left-a-door-open",

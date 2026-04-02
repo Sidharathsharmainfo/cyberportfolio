@@ -6,29 +6,35 @@ import { motion } from "framer-motion";
 import './blog.css'; 
 
 const blogPosts = [
+  {
+    slug: "iso-27001-implementation-guide", // Naya Slug
+    title: "Step-by-Step ISO 27001 Implementation Guide",
+    description: "A practical approach to building an ISMS, defining scope, and closing compliance gaps by 30%.",
+    date: "April 1, 2026"
+  },
  {
     slug: "iso-27001-basics-guide",
     title: "ISO 27001: The Gold Standard",
     description: "A beginner's guide to understanding ISMS and why businesses need this certification for trust.",
-    date: "April 10, 2026"
+    date: "March 27, 2026"
   }, 
   {
     slug: "networking-basics-lan-vlan",
     title: "Networking 101: LAN & VLANs",
     description: "Understanding the building blocks of a secure network and why segmentation is a security must-have.",
-    date: "April 05, 2026"
+    date: "March 23, 2026"
   },
   {
     slug: "the-developer-who-left-a-door-open",
     title: "The Developer Who Left a Door Open",
     description: "A deep dive into how a small oversight in code led to a major security breach at a fast-growing startup.",
-    date: "March 25, 2026"
+    date: "Feb 2, 2026"
   },
   {
     slug: "introduction-to-cybersecurity",
     title: "Introduction to Cybersecurity",
     description: "Cybersecurity is crucial for protecting sensitive information from cyber threats in the modern digital age.",
-    date: "March 20, 2026"
+    date: "Jan 22, 2026"
   },
 
 ];

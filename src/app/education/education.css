@@ -3,7 +3,7 @@
   padding: 50px 0;
 }
 
-/* Section Divider Consistency */
+/* Section Divider Consistency matching Experience/Education */
 .custom-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, #333, transparent);
@@ -13,12 +13,12 @@
   font-size: 1.1rem;
   letter-spacing: 3px;
   color: #888;
-  border-left: 3px solid #fff;
+  border-left: 3px solid #fff; /* Side accent matching theme */
   padding-left: 15px;
   text-transform: uppercase;
 }
 
-/* Education Items */
+/* Education Items Styling */
 .edu-item {
   padding: 20px 0;
   border-bottom: 1px solid #1a1a1a;
@@ -44,7 +44,7 @@
   margin-bottom: 0;
 }
 
-/* Certifications Styling */
+/* Certifications Styling matching original */
 .cert-item-v2 {
   display: flex;
   justify-content: space-between;
@@ -52,6 +52,28 @@
   padding: 18px 0;
   border-bottom: 1px solid #1a1a1a;
   min-height: 85px;
+  transition: all 0.3s ease;
+}
+
+/* Cursor effect for links/popups */
+.clickable-cert {
+  cursor: pointer;
+}
+
+.clickable-cert:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding-left: 10px;
+}
+
+.clickable-cert:hover .cert-title-v2 {
+  color: #fff;
+}
+
+/* Verification Icon */
+.external-link-icon {
+  font-size: 0.7rem;
+  color: #555;
+  margin-left: 8px;
 }
 
 .cert-info {
@@ -83,7 +105,7 @@
   color: #444;
 }
 
-/* Pagination Controls */
+/* Pagination Controls matching design */
 .cert-pagination {
   display: flex;
   align-items: center;
@@ -115,7 +137,25 @@
   color: #444;
 }
 
-/* Layout Utilities */
+/* Modal Styling */
+.cert-modal-content {
+  background-color: #0c0c0c !important; /* Dark dark background */
+  border: 1px solid #222 !important; /* Match border consistency */
+  border-radius: 4px;
+}
+
+/* Non-downloadable view container */
+.pdf-viewer-container {
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.embedded-pdf {
+  display: block;
+}
+
+/* Layout Utilities matching original */
 .border-left-divider {
   border-left: 1px solid #1a1a1a;
 }
@@ -134,7 +174,7 @@
   transition: all 0.3s ease;
 }
 
-/* Responsive */
+/* Responsive matching design */
 @media (max-width: 991px) {
   .border-left-divider {
     border-left: none;
@@ -147,5 +187,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+  
+  .resume-download-btn {
+    width: 100%;
+    margin-top: 20px;
   }
 }
