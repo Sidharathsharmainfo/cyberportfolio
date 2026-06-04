@@ -5,10 +5,10 @@ import { Container, Row, Col, Button, Card, Spinner } from "react-bootstrap";
 import { FaTwitter, FaFacebook, FaChevronLeft, FaChevronRight, FaArrowLeft } from "react-icons/fa";
 import "./blogpost.css";
 
-// Blog Data (Keep this same as your list)
+// Blog Data
 const blogPosts = [
   {
-    slug: "The journey from an intern to a cybersecurity auditor",
+    slug: "The-journey-from-an-intern-to-a-cybersecurity-auditor",
     title: "My Journey as a Cybersecurity Auditor",
     content: `
       <p>The journey from an intern to a cybersecurity auditor has been quite rewarding, although it was challenging. The path to becoming a cybersecurity auditor has been filled with learning, practical experience, and continuous development. I began as a cybersecurity auditor intern and over time, with hard work, curiosity, and hands-on learning, I progressed to becoming a full auditor.</p>

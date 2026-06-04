@@ -7,7 +7,7 @@ import './blog.css';
 
 const blogPosts = [
   {
-    slug: "The journey from an intern to a cybersecurity auditor",
+    slug: "The-journey-from-an-intern-to-a-cybersecurity-auditor",
     title: "The journey from an intern to a cybersecurity auditor",
     description: "The journey from an intern to a cybersecurity auditor has been quite rewarding, although it was challenging.",
     date: "May 2, 2026"
