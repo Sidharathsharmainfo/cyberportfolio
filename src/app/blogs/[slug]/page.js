@@ -59,52 +59,6 @@ const blogPosts = [
   },
   {
     slug: "iso-27001-implementation-guide",
-    title: "My Journey as a Cybersecurity Auditor",
-    content: `
-      <p>My journey in the field of cybersecurity auditing has been full of learning, hands‑on experience, and continuous growth. I began as a cybersecurity auditor intern, and over time, I worked my way up to becoming a full auditor through dedication, curiosity, and practical exposure.</p>
-
-      <div class="custom-divider my-4"></div>
-
-      <h3>Starting as an Intern</h3>
-      <p>When I joined as a cybersecurity intern, my first responsibility was to study the company’s internal security policies. I not only read them but also shared my suggestions and viewpoints. My inputs were appreciated, and the team acknowledged that I had a good understanding of security fundamentals.</p>
-      <p>To strengthen my foundation, I started learning ISO 27001 on my own, especially because the company I worked for was ISO and SOC certified. This helped me understand how global security standards work in real organizations.</p>
-
-      <h3>My First Project: Security Camera Compliance</h3>
-      <p>After about 1.5 months, I received my first major project: Security camera replacement with compliance requirements. My role was focused on research:</p>
-      <ul>
-        <li>Understanding camera components</li>
-        <li>Studying compliance requirements</li>
-        <li>Evaluating cloud delivery and integration</li>
-        <li>Shortlisting compliant camera models</li>
-      </ul>
-      <p>My colleague handled documentation, and together we presented proposals in meetings. After a month of research and collaboration, we finalized NDAA‑compliant cameras, selected the vendor, and submitted the proposal with pricing details. This project gave me confidence and real-world exposure to compliance-driven decision-making.</p>
-
-      <h3>Growing Into System Auditing & Internal Audits</h3>
-      <p>Once the project was completed, I moved into internal auditing and system auditing. My responsibilities included:</p>
-      <ul>
-        <li>Suggesting minor non‑conformities</li>
-        <li>Reviewing firewall rules</li>
-        <li>Checking incoming and outgoing traffic</li>
-        <li>Monitoring website access based on campaigns</li>
-        <li>Reviewing GPO policies according to organizational needs</li>
-      </ul>
-      <p>This phase helped me understand how security controls work at a system level.</p>
-
-      <h3>Phishing Campaigns & User Awareness</h3>
-      <p>Every quarter, I conducted phishing campaigns and prepared reports on employees who fell for phishing attempts. I also sent them guidance emails explaining what they should avoid, how to identify phishing attempts, and best practices to stay secure. Through consistent awareness training, we successfully reduced phishing incidents by nearly 15%.</p>
-
-      <h3>Where I Am Now</h3>
-      <p>Today, my role includes:</p>
-      <ul>
-        <li>Helping with policy creation</li>
-        <li>Conducting system audits</li>
-        <li>Managing user GPO configurations</li>
-        <li>Running phishing campaigns and awareness sessions</li>
-      </ul>
-      <p>My journey from intern to cybersecurity auditor has been challenging but incredibly rewarding. Every project, audit, and campaign has helped me grow into a more confident and skilled security professional.</p>`,
-  },
-  {
-    slug: "iso-27001-implementation-guide",
     title: "Step-by-Step ISO 27001:2022 Implementation Guide",
     content: `
       <p>ISO/IEC 27001:2022 is a globally recognized standard for <strong>Information Security Management Systems (ISMS)</strong>. It helps organizations protect sensitive data and manage security risks effectively.</p>
