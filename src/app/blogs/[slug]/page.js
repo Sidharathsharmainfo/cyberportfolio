@@ -325,6 +325,7 @@ const BlogPost = () => {
                     <FaFacebook className="me-2" /> Facebook
                   </Button>
                   <Button className="cyber-btn-outline" onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`, "_blank")}>
+                  <FaLinkedin className="me-2" /> Linkedin
                   </Button>
                 </div>
 
