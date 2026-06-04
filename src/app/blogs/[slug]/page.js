@@ -8,6 +8,102 @@ import "./blogpost.css";
 // Blog Data (Keep this same as your list)
 const blogPosts = [
   {
+    slug: "The journey from an intern to a cybersecurity auditor",
+    title: "My Journey as a Cybersecurity Auditor",
+    content: `
+      <p>The journey from an intern to a cybersecurity auditor has been quite rewarding, although it was challenging. The path to becoming a cybersecurity auditor has been filled with learning, practical experience, and continuous development. I began as a cybersecurity auditor intern and over time, with hard work, curiosity, and hands-on learning, I progressed to becoming a full auditor.</p>
+
+      <h3>As an intern</h3>
+      <p>My initial role as a cybersecurity intern was to understand the company's internal security policies. I not only read the policy documents but also offered my ideas and feedback to team members. The inputs were well-received and the team could see I had a decent grasp of security fundamentals.</p>
+      <p>I learned the ISO 27001 on my own to deepen my understanding as the organization I worked for was ISO and SOC certified and so it was valuable to know how global standards work at a practical level.</p>
+
+      <h3>My first project: security camera compliance</h3>
+      <p>Around 1.5 months into my internship, I was handed with my first big project:Security camera replacement with compliance requirement.</p>
+      <p>I was given responsibilities related to research in this project, which were:</p>
+      <ul>
+        <li>Understanding camera components and how they work</li>
+        <li>Researching compliance requirements</li>
+        <li>Understanding cloud delivery and integration</li>
+        <li>Shortlisting compliant camera models</li>
+      </ul>
+      <p>While my colleague handled documentation part and we presented proposals in the meeting. After conducting research for nearly a month we finalized ndaa compliant camera and decided a vendor and prepared the proposal along with pricing.This provided with immense confidence as well as hands on experience in the compliance driven decisions.</p>
+
+      <h3>Moving into system and internal auditing</h3>
+      <p>After I completed the above project, I moved to internal and system auditing tasks:</p>
+      <ul>
+        <li>Provide recommendations on slight non-conformities</li>
+        <li>Reviewing firewall rules and incoming, outgoing traffic</li>
+        <li>Monitoring access to the website with respect to the campaigns</li>
+        <li>Reviewing the GPO policies as per requirement of the organization.</li>
+      </ul>
+      <p>This helped me learn how security policies are put to practice at the system level.</p>
+
+      <h3>Phishing Campaigns & User awareness</h3>
+      <p>I performed phishing campaigns for each quarter of the year and gave a report of employees who was caught by the phishing campaign and also gave them a guidance email:</p>
+      <ul>
+        <li>what not to do</li>
+        <li>how to report</li>
+        <li>what to be cautious of</li>
+      </ul>
+      <p>Over the past quarter's training sessions we have reduced the phishing incidents by almost 15%.</p>
+
+      <h3>Today:</h3>
+      <p>My current responsibilities at the office are:</p>
+      <ul>
+        <li>Assisting in creating the policy.</li>
+        <li>Conducting system audits.</li>
+        <li>Managing user GPO configurations.</li>
+        <li>Conducting phishing campaigns and awareness training.</li>
+      </ul>
+      <p>From an intern to a cybersecurity auditor, my experience has been immensely rewarding, albeit challenging. Every project and every audit, no matter how big or small, has contributed significantly to my growth as a security professional.</p>`,
+},
+  {
+    slug: "iso-27001-implementation-guide",
+    title: "My Journey as a Cybersecurity Auditor",
+    content: `
+      <p>My journey in the field of cybersecurity auditing has been full of learning, hands‑on experience, and continuous growth. I began as a cybersecurity auditor intern, and over time, I worked my way up to becoming a full auditor through dedication, curiosity, and practical exposure.</p>
+
+      <div class="custom-divider my-4"></div>
+
+      <h3>Starting as an Intern</h3>
+      <p>When I joined as a cybersecurity intern, my first responsibility was to study the company’s internal security policies. I not only read them but also shared my suggestions and viewpoints. My inputs were appreciated, and the team acknowledged that I had a good understanding of security fundamentals.</p>
+      <p>To strengthen my foundation, I started learning ISO 27001 on my own, especially because the company I worked for was ISO and SOC certified. This helped me understand how global security standards work in real organizations.</p>
+
+      <h3>My First Project: Security Camera Compliance</h3>
+      <p>After about 1.5 months, I received my first major project: Security camera replacement with compliance requirements. My role was focused on research:</p>
+      <ul>
+        <li>Understanding camera components</li>
+        <li>Studying compliance requirements</li>
+        <li>Evaluating cloud delivery and integration</li>
+        <li>Shortlisting compliant camera models</li>
+      </ul>
+      <p>My colleague handled documentation, and together we presented proposals in meetings. After a month of research and collaboration, we finalized NDAA‑compliant cameras, selected the vendor, and submitted the proposal with pricing details. This project gave me confidence and real-world exposure to compliance-driven decision-making.</p>
+
+      <h3>Growing Into System Auditing & Internal Audits</h3>
+      <p>Once the project was completed, I moved into internal auditing and system auditing. My responsibilities included:</p>
+      <ul>
+        <li>Suggesting minor non‑conformities</li>
+        <li>Reviewing firewall rules</li>
+        <li>Checking incoming and outgoing traffic</li>
+        <li>Monitoring website access based on campaigns</li>
+        <li>Reviewing GPO policies according to organizational needs</li>
+      </ul>
+      <p>This phase helped me understand how security controls work at a system level.</p>
+
+      <h3>Phishing Campaigns & User Awareness</h3>
+      <p>Every quarter, I conducted phishing campaigns and prepared reports on employees who fell for phishing attempts. I also sent them guidance emails explaining what they should avoid, how to identify phishing attempts, and best practices to stay secure. Through consistent awareness training, we successfully reduced phishing incidents by nearly 15%.</p>
+
+      <h3>Where I Am Now</h3>
+      <p>Today, my role includes:</p>
+      <ul>
+        <li>Helping with policy creation</li>
+        <li>Conducting system audits</li>
+        <li>Managing user GPO configurations</li>
+        <li>Running phishing campaigns and awareness sessions</li>
+      </ul>
+      <p>My journey from intern to cybersecurity auditor has been challenging but incredibly rewarding. Every project, audit, and campaign has helped me grow into a more confident and skilled security professional.</p>`,
+},
+  {
     slug: "iso-27001-implementation-guide",
     title: "Step-by-Step ISO 27001:2022 Implementation Guide",
     content: `

@@ -7,7 +7,13 @@ import './blog.css';
 
 const blogPosts = [
   {
-    slug: "iso-27001-implementation-guide", // Naya Slug
+    slug: "The journey from an intern to a cybersecurity auditor",
+    title: "The journey from an intern to a cybersecurity auditor",
+    description: "The journey from an intern to a cybersecurity auditor has been quite rewarding, although it was challenging.",
+    date: "May 2, 2026"
+  },
+  {
+    slug: "iso-27001-implementation-guide",
     title: "Step-by-Step ISO 27001 Implementation Guide",
     description: "A practical approach to building an ISMS, defining scope, and closing compliance gaps by 30%.",
     date: "April 1, 2026"
