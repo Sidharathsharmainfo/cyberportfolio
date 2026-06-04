@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Container, Row, Col, Button, Card, Spinner } from "react-bootstrap";
-import { FaTwitter, FaFacebook, FaChevronLeft, FaChevronRight, FaArrowLeft } from "react-icons/fa";
+import { FaTwitter, FaFacebook, FaChevronLeft, FaChevronRight, FaArrowLeft, FaLinkedin } from "react-icons/fa";
 import "./blogpost.css";
 
 // Blog Data
@@ -56,7 +56,7 @@ const blogPosts = [
         <li>Conducting phishing campaigns and awareness training.</li>
       </ul>
       <p>From an intern to a cybersecurity auditor, my experience has been immensely rewarding, albeit challenging. Every project and every audit, no matter how big or small, has contributed significantly to my growth as a security professional.</p>`,
-},
+  },
   {
     slug: "iso-27001-implementation-guide",
     title: "My Journey as a Cybersecurity Auditor",
@@ -102,7 +102,7 @@ const blogPosts = [
         <li>Running phishing campaigns and awareness sessions</li>
       </ul>
       <p>My journey from intern to cybersecurity auditor has been challenging but incredibly rewarding. Every project, audit, and campaign has helped me grow into a more confident and skilled security professional.</p>`,
-},
+  },
   {
     slug: "iso-27001-implementation-guide",
     title: "Step-by-Step ISO 27001:2022 Implementation Guide",
@@ -281,7 +281,7 @@ const BlogPost = () => {
     if (slug) {
       const currentPost = blogPosts[currentIndex];
       setPost(currentPost || null);
-      window.scrollTo(0, 0); 
+      window.scrollTo(0, 0);
     }
   }, [slug, currentIndex]);
 
@@ -299,8 +299,8 @@ const BlogPost = () => {
             <Card className="blog-post-card">
               <Card.Body>
                 {/* 2. Back Button */}
-                <Button 
-                  variant="link" 
+                <Button
+                  variant="link"
                   className="p-0 mb-4 text-decoration-none text-secondary"
                   onClick={() => router.push('/')}
                 >
@@ -309,11 +309,11 @@ const BlogPost = () => {
 
                 {/* 3. Title with Side Bar */}
                 <h1 className="blog-post-title">{post.title}</h1>
-                
+
                 {/* 4. Main Body */}
-                <div 
-                  className="blog-post-content" 
-                  dangerouslySetInnerHTML={{ __html: post.content }} 
+                <div
+                  className="blog-post-content"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
                 />
 
                 {/* 5. Share Buttons */}
@@ -324,20 +324,22 @@ const BlogPost = () => {
                   <Button className="cyber-btn-outline" onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, "_blank")}>
                     <FaFacebook className="me-2" /> Facebook
                   </Button>
+                  <Button className="cyber-btn-outline" onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`, "_blank")}>
+                  </Button>
                 </div>
 
                 {/* 6. Navigation Controls */}
                 <div className="nav-controls">
-                  <Button 
-                    className="cyber-btn-outline" 
+                  <Button
+                    className="cyber-btn-outline"
                     disabled={currentIndex === 0}
                     onClick={() => router.push(`/blogs/${blogPosts[currentIndex - 1]?.slug}`)}
                   >
                     <FaChevronLeft className="me-2" /> Prev
                   </Button>
 
-                  <Button 
-                    className="cyber-btn-outline" 
+                  <Button
+                    className="cyber-btn-outline"
                     disabled={currentIndex === blogPosts.length - 1}
                     onClick={() => router.push(`/blogs/${blogPosts[currentIndex + 1]?.slug}`)}
                   >
