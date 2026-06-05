@@ -13,7 +13,7 @@ const blogPosts = [
     content: `
       <p>As a cybersecurity professional, I constantly audit systems for technical vulnerabilities. However, the human element remains the primary attack vector. Recently, I received a sophisticated recruitment message on LinkedIn offering immediately available Cybersecurity Engineer roles at <strong>L3Harris Technologies</strong>—a major US defense contractor.</p>
       
-      <p>At first glance, the message looked completely legitimate, well-structured, and highly professional. However, my cybersecurity training kicked in the moment I analyzed the external links provided for application tracking.</p>
+      <p>At first glance, the message looked completely legitimate, well-structured, and highly professional. However, my cybersecurity training kicked in the moment I analyzed the external links provided for application tracking. </p>
 
       <div class="custom-divider my-4"></div>
 
