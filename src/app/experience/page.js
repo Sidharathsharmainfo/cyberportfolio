@@ -6,19 +6,18 @@ import { FaLock, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./experience.css";
 
 const experiences = [
-  //  { 
-  //   title: "Cybersecurity Auditor", 
-  //   company: "Warren & Carter Technologies", 
-  //   duration: "April 2026 - Present", 
-  //   shortDesc: "Led ISO 27001, SOC 2 & NIST 800-53 audits — 30% gap reduction", 
-  //   fullDetails: [
-  //     "Conducted multi-framework internal audits (ISO 27001, SOC 2, NIST SP 800-53) across 500+ endpoints.",
-  //     "Administered Vanta GRC platform for automated evidence collection.",
-  //     "Enforced Access Control policies via Active Directory (AD DS) and GPO hardening.",
-  //     "Designed phishing simulation campaigns — 35% reduction in risk incidents.",
-  //     "Authored ISO 27001 policy suite: InfoSec, Access Control, and Audit Logging."
-  //   ] 
-  // },
+   { 
+    title: "Cybersecurity Auditor", 
+    company: "Warren & Carter Technologies", 
+    duration: "April 2026 - Present", 
+    shortDesc: "Audits systems for ISO 27001/NIST compliance, manages risk registers,",
+    fullDetails: [
+      "Conduct comprehensive risk assessments, maintain enterprise risk registers, and evaluate third-party/vendor security postures to mitigate external exposures.",
+      "Perform rigorous internal audits and system reviews to ensure strict compliance with standard industry frameworks, specifically ISO 27001 and NIST.",
+      "Execute vulnerability scans, oversee penetration testing, and review technical security controls across firewalls, IAM, network devices, and infrastructure systems.",
+      "Enforce security governance policies, conduct employee awareness training, and support incident response and remediation activities.",
+    ] 
+  },
   { 
     title: "Cybersecurity Auditor", 
     company: "Etech Global Services", 

@@ -144,7 +144,7 @@ export default function EducationCertifications() {
         {/* Resume Download Section */}
         <div className="text-center mt-2">
           <motion.a 
-            href="/pdf/GRC_Specialist_Sidharath_Sharma_Resume.pdf" 
+            href="/pdf/ComplianceSpecialist_SidharathSharma_Resume.pdf" 
             target="_blank" // Naye tab mein open karega
             rel="noopener noreferrer" // Security ke liye best practice
             className="resume-download-btn"
