@@ -26,14 +26,14 @@ const blogPosts = [
         </div>
         <div class="col-md-6 >
           <div class="p-3 bg-dark rounded border border-secondary height-100">
-          <img src="/images/linkedinscam/scam2.png" alt="OSINT Investigation Part 2" class="img-fluid rounded border border-secondary w-100" />
+          <img src="/images/linkedinscam/websitelinks.png" alt="OSINT Investigation Part 2" class="img-fluid rounded border border-secondary w-100" />
         </div>
         </div>
         <p class="image-caption text-center text-muted mt-2 w-100"><em>Figure 1: Spoofed recruiter profile and the phishing links delivered via LinkedIn InMail.</em></p>
       </div>
 
       <h3>The Red Flag: Standard URL Structures vs. Shady Shorteners</h3>
-      <p>To an untrained eye, these links might look like modern hiring shortcuts. But from a security standpoint, <strong>established enterprise companies do not route their primary applications through unbranded shortened URLs or third-party domains like <code>.site/kyfk</code>.</strong></p>
+      <p>To an untrained eye, these links might look like modern hiring shortcuts. But from a security standpoint, <strong>established enterprise companies do not route their primary applications through unbranded shortened URLs or third-party domains like <code>.site/kiyk</code>.</strong></p>
       
       <p>In standard enterprise infrastructure, the link structure is transparent. When you click an opening, the domain routes directly to the company's official job portal, and the URL slug matches the job title. For instance, just look at the browser address bar right now on this portfolio: when you navigated to this single post, the URL dynamically updated to include the exact semantic slug of the article. This clean, direct linking is standard digital hygiene—something threat actors intentionally break to hide malicious redirects.</p>
 
