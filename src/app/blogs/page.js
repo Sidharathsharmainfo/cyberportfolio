@@ -6,11 +6,17 @@ import { motion } from "framer-motion";
 import './blog.css'; 
 
 const blogPosts = [
+   {
+    slug: "anatomy-of-a-recruitment-phishing-scam",
+    title: "Anatomy of a LinkedIn Recruitment Scam: A GRC Auditor's OSINT Investigation",
+    description: "As a cybersecurity professional, I constantly audit systems for technical vulnerabilities.",
+    date: "May 2, 2026"
+  },
   {
-    slug: "The-journey-from-an-intern-to-a-cybersecurity-auditor",
+    slug: "the-journey-from-an-intern-to-a-cybersecurity-auditor",
     title: "The journey from an intern to a cybersecurity auditor",
     description: "The journey from an intern to a cybersecurity auditor has been quite rewarding, although it was challenging.",
-    date: "May 2, 2026"
+    date: "April 25, 2026"
   },
   {
     slug: "iso-27001-implementation-guide",

@@ -8,7 +8,76 @@ import "./blogpost.css";
 // Blog Data
 const blogPosts = [
   {
-    slug: "The-journey-from-an-intern-to-a-cybersecurity-auditor",
+    slug: "anatomy-of-a-recruitment-phishing-scam",
+    title: "Anatomy of a LinkedIn Recruitment Scam: A GRC Auditor's OSINT Investigation",
+    content: `
+      <p>As a cybersecurity professional, I constantly audit systems for technical vulnerabilities. However, the human element remains the primary attack vector. Recently, I received a sophisticated recruitment message on LinkedIn offering immediately available Cybersecurity Engineer roles at <strong>L3Harris Technologies</strong>—a major US defense contractor.</p>
+      
+      <p>At first glance, the message looked completely legitimate, well-structured, and highly professional. However, my cybersecurity training kicked in the moment I analyzed the external links provided for application tracking.</p>
+
+      <div class="custom-divider my-4"></div>
+
+      <h3>The Bait: High-Value Target Phishing</h3>
+      <p>The sender approached me with an immediate opening for a technical security role in Texas, explicitly tailoring the message to attract a cybersecurity professional. The message provided external links pointing to a suspicious domain: <code>usatalent.site</code>.</p>
+      
+      <div class="row g-3 my-4">
+        <div class="col-md-6">
+          <img src="/images/linkedinscam/scam.png" alt="LinkedIn Phishing Scam Profile and Message" class="img-fluid rounded border border-secondary w-100" />
+        </div>
+        <div class="col-md-6 >
+          <div class="p-3 bg-dark rounded border border-secondary height-100">
+          <img src="/images/linkedinscam/scam2.png" alt="OSINT Investigation Part 2" class="img-fluid rounded border border-secondary w-100" />
+        </div>
+        </div>
+        <p class="image-caption text-center text-muted mt-2 w-100"><em>Figure 1: Spoofed recruiter profile and the phishing links delivered via LinkedIn InMail.</em></p>
+      </div>
+
+      <h3>The Red Flag: Standard URL Structures vs. Shady Shorteners</h3>
+      <p>To an untrained eye, these links might look like modern hiring shortcuts. But from a security standpoint, <strong>established enterprise companies do not route their primary applications through unbranded shortened URLs or third-party domains like <code>.site/kyfk</code>.</strong></p>
+      
+      <p>In standard enterprise infrastructure, the link structure is transparent. When you click an opening, the domain routes directly to the company's official job portal, and the URL slug matches the job title. For instance, just look at the browser address bar right now on this portfolio: when you navigated to this single post, the URL dynamically updated to include the exact semantic slug of the article. This clean, direct linking is standard digital hygiene—something threat actors intentionally break to hide malicious redirects.</p>
+
+      <h3>The Gen-AI Twist: Perfect Phishing Ecosystems</h3>
+      <p>Historically, we taught users to spot phishing by looking for poor grammar, broken English, or formatting glitches. <strong>Generative AI has completely eliminated those red flags.</strong> Attackers are now using sophisticated LLMs to write flawlessly structured, contextually accurate messages that mimic corporate recruitment tone to perfection. Because there are no grammatical errors to catch, your only real defense is to audit the underlying technical infrastructure.</p>
+
+      <h3>Technical Investigation: Defining the Logical Scope</h3>
+      <p>When analyzing a cyber threat, defining the correct testing boundary is a fundamental GRC and technical rule. Logically, <strong>the focus of the investigation must always be the attacker's active infrastructure (usatalent.site) and not the spoofed victim company (l3harris.com).</strong> Scanning or touching an enterprise network like L3Harris without explicit authorization breaches legal boundaries and is entirely out-of-scope. The malicious indicators, tracking telemetry, and harvesting payloads live exclusively on the attacker's domain.</p>
+      
+      <p>To stay completely safe and within legal boundaries, I executed a <strong>Passive OSINT WHOIS look-up</strong>. This allowed me to pull public registration data from external registries without directly touching or alerting the attacker's active server.</p>
+
+      <div class="row g-3 my-4">
+       <div class="col-md-12">
+         <img src="/images/linkedinscam/whois.png" alt="LinkedIn Phishing Scam Profile and Message" class="img-fluid rounded border border-secondary w-100" />
+        </div>
+        <p class="image-caption text-center text-muted mt-2 w-100"><em>Figure 2: Passive OSINT lookups exposing the underlying structural timeline of the domains.</em></p>
+      </div>
+
+      <ul>
+        <li><strong>Legitimate Entity (l3harris.com):</strong> Registered way back in <strong>2018</strong> via CSC Corporate Domains, Inc., a highly secured enterprise registrar used to mitigate domain hijacking risks.</li>
+        <li><strong>The Fraudulent Link (usatalent.site):</strong> Created very recently on <strong>September 5, 2025</strong>, using a consumer-grade public registrar (Namecheap) with proxy privacy enabled to hide the true registration source.</li>
+      </ul>
+
+      <h3>The Mechanics of the Attack Vector</h3>
+      <p>Had a job seeker clicked through, the infrastructure was heavily optimized for one of two outcomes:</p>
+      <ol>
+        <li><strong>Credential Harvesting:</strong> Using a spoofed OAuth or corporate login portal to capture authentication tokens.</li>
+        <li><strong>Identity Harvesting:</strong> Exfiltrating sensitive personal data (such as SSNs, Passport numbers, or complete background details) under the pretense of a corporate screening process.</li>
+      </ol>
+
+      <h3>Auditor's Final Blueprint: Verify, Slow Down, and Block</h3>
+      <p>Social engineering plays on our emotions—urgency, opportunity, and excitement. The most critical control you can implement is a personal operational protocol:</p>
+      <ul>
+        <li><strong>Zero-Trust Validation:</strong> Treat unverified communication channels as hostile until verified out-of-band.</li>
+        <li><strong>Analyze Before Interaction:</strong> Look closely at the destination URLs. If the corporate identity doesn't seamlessly carry through the domain path, do not engage.</li>
+        <li><strong>Proactive Action:</strong> If a profile or message raises these technical alarms, do not just close it. Document the technical footprint, report it to the platform, and block the entity immediately.</li>
+      </ul>
+
+      <div class="highlight-box mt-4 p-3" style="background: #111; border-left: 4px solid #fff;">
+        <p class="mb-0"><strong>Auditor's Advice:</strong> Phishing has evolved past simple typos into highly sophisticated AI operations. Take your time. Keep your scope clear, analyze the attacker's infrastructure safely via passive OSINT, and enforce the block immediately.</p>
+      </div>`,
+  },
+  {
+    slug: "the-journey-from-an-intern-to-a-cybersecurity-auditor",
     title: "My Journey as a Cybersecurity Auditor",
     content: `
       <p>The journey from an intern to a cybersecurity auditor has been quite rewarding, although it was challenging. The path to becoming a cybersecurity auditor has been filled with learning, practical experience, and continuous development. I began as a cybersecurity auditor intern and over time, with hard work, curiosity, and hands-on learning, I progressed to becoming a full auditor.</p>
@@ -57,16 +126,14 @@ const blogPosts = [
       </ul>
       <p>From an intern to a cybersecurity auditor, my experience has been immensely rewarding, albeit challenging. Every project and every audit, no matter how big or small, has contributed significantly to my growth as a security professional.</p>`,
   },
+ 
   {
     slug: "iso-27001-implementation-guide",
     title: "Step-by-Step ISO 27001:2022 Implementation Guide",
     content: `
       <p>ISO/IEC 27001:2022 is a globally recognized standard for <strong>Information Security Management Systems (ISMS)</strong>. It helps organizations protect sensitive data and manage security risks effectively.</p>
-      
       <p>In this guide, I’ll walk you through a practical, step-by-step approach to implementing ISO 27001 based on my hands-on experience in the GRC domain.</p>
-
       <div class="custom-divider my-4"></div>
-
       <h3>Step 1: Define Scope</h3>
       <p>Start by defining the boundary of your ISMS. You need to identify what exactly you are protecting:</p>
       <ul>
@@ -74,17 +141,14 @@ const blogPosts = [
         <li>What critical data needs protection (e.g., Customer PII, Intellectual Property)?</li>
       </ul>
       <p><em>Example: Cloud infrastructure, internal HR tools, and developer endpoints.</em></p>
-
       <h3>Step 2: Risk Assessment & Treatment</h3>
       <p>Identify risks that could impact the confidentiality, integrity, or availability of your data. For every risk (like Insider Threats or Data Breaches), create a <strong>Risk Register</strong>:</p>
       <ul>
         <li><strong>Impact & Likelihood:</strong> How bad is it and how likely is it?</li>
         <li><strong>Mitigation Plan:</strong> How will you fix or reduce it?</li>
       </ul>
-
       <h3>Step 3: Select Controls (Annex A)</h3>
       <p>Once risks are identified, map them to the <strong>ISO 27001 Annex A controls</strong>. These are categorized into Organizational, People, Physical, and Technological themes.</p>
-
       <h3>Step 4: Implement Policies & Documentation</h3>
       <p>Compliance is nothing without documentation. You must create and enforce:</p>
       <ul>
@@ -92,16 +156,12 @@ const blogPosts = [
         <li>Information Security Policy</li>
         <li>Incident Response Plan</li>
       </ul>
-
       <h3>Step 5: Evidence Collection & Automation</h3>
       <p>Modern GRC involves using tools like <strong>Vanta</strong> or <strong>Drata</strong> to automate evidence collection. This ensures you are always "audit-ready" rather than rushing at the end of the year.</p>
-
       <h3>Step 6: Internal Audit</h3>
       <p>Before the external certification body arrives, conduct an internal audit. This helps identify gaps and ensures your controls are actually working as intended.</p>
-
       <h3>Step 7: Continuous Monitoring (The PDCA Cycle)</h3>
       <p>Security is not a destination; it's a journey. Follow the <strong>Plan-Do-Check-Act</strong> cycle to review risks regularly and update controls based on new threats.</p>
-
       <div class="highlight-box mt-4 p-3" style="background: #111; border-left: 4px solid #fff;">
         <p class="mb-0"><strong>Author's Note:</strong> In my experience as a Cybersecurity Auditor, I successfully reduced compliance gaps by <strong>30%</strong> by strictly following these phases and focusing on risk-driven controls.</p>
       </div>`,
@@ -111,22 +171,16 @@ const blogPosts = [
     title: "Introduction to Cybersecurity: Why It Matters More Than Ever",
     content: `
       <p>In today's fast-paced digital world, the question is no longer <strong>whether we should be concerned about cybersecurity</strong>—it’s <strong>how we can protect ourselves effectively</strong>. Cybersecurity has become a crucial concern for individuals, businesses, and, importantly, developers.</p>
-
       <p><strong>Why is cybersecurity such an essential field to dive into?</strong></p>
-      
       <p>Imagine this: Your personal data, online accounts, or even your company's sensitive information—<strong>all stored in the digital world.</strong> What if that data could be accessed by malicious actors in the blink of an eye? In a world where everything is connected, the threat of cyberattacks is always looming.</p>
-
       <p><strong>But here’s the thing—</strong> cybersecurity is about more than just protecting your personal data. It's about ensuring:</p>
       <ul>
-      <li><strong>Confidentiality</strong> – Preventing unauthorized access to sensitive information.</li>
-      <li><strong>Integrity</strong> – Ensuring data remains unaltered.</li>
+        <li><strong>Confidentiality</strong> – Preventing unauthorized access to sensitive information.</li>
+        <li><strong>Integrity</strong> – Ensuring data remains unaltered.</li>
         <li><strong>Availability</strong> – Keeping services up and running without disruptions.</li>
       </ul>
-
       <p><strong>For developers, understanding and integrating cybersecurity into their workflow is no longer optional; it’s a responsibility.</strong></p>
-
       <p>So, what does this mean for developers? How does it impact their day-to-day work? And, most importantly, how can we stay ahead of potential threats in this ever-evolving digital landscape?</p>
-
       <p><strong>Stay tuned for the next blog to learn more!</strong></p>`,
   },
   {
@@ -134,28 +188,20 @@ const blogPosts = [
     title: "The Developer Who Left a Door Open: A Lesson in Cybersecurity",
     content: `
       <p><strong>Meet Bob.</strong> A talented developer working at a fast-growing startup. He loved building features, optimizing performance, and delivering products fast. Security? <strong>That was something for the IT security team to worry about</strong>—or so he thought.</p>
-
       <h3>The Costly Mistake</h3>
       <p>One day, Bob was assigned to develop a login system for a new app. Pressed for time, he used a basic authentication method:</p>
-
       <ul>
         <li>No multi-factor authentication</li>
         <li>No rate limiting</li>
         <li>No password encryption</li>
       </ul>
-
       <p><strong>“It works, so it’s fine,”</strong> he thought.</p>
-
       <h3>The Breach</h3>
       <p>A few months later, disaster struck.</p>
-      
       <p>A hacker, lurking in the shadows, found Bob’s application. Using a simple <strong>brute-force attack</strong>, they guessed weak passwords. Within minutes, they had access to thousands of user accounts. Worse yet, since Bob hadn’t encrypted stored passwords, the hacker <strong>extracted the entire database</strong>.</p>
-
       <p><strong>The breach made headlines. Users lost trust. The startup’s reputation was damaged.</strong> And Bob? He learned a painful lesson—<strong>security is not optional.</strong></p>
-
       <h3>Why Developers Are the First Line of Defense</h3>
       <p>Like Bob, many developers focus on building features while overlooking security. But in reality, <strong>every piece of code is a potential entry point for attackers.</strong> A single oversight—an open port, an unpatched library, or weak authentication—can lead to catastrophic breaches.</p>
-
       <h3>How Can Developers Stay Ahead?</h3>
       <ul>
         <li><strong>Think Like a Hacker:</strong> Before deploying code, ask yourself—<em>how would someone try to break this?</em> Use penetration testing tools like Burp Suite or OWASP ZAP.</li>
@@ -164,12 +210,9 @@ const blogPosts = [
         <li><strong>Stay Updated:</strong> Cyber threats evolve daily. Keep learning about the latest vulnerabilities and security best practices.</li>
         <li><strong>Make Security a Habit:</strong> Integrate security checks into your development process (<strong>DevSecOps</strong>) rather than treating it as an afterthought.</li>
       </ul>
-
       <h3>The Takeaway</h3>
       <p>A small mistake in code can open doors for attackers. But a security-conscious developer can <strong>shut those doors before they’re even found.</strong></p>
-
-      <p><strong>Next time, we’ll dive deeper into how hackers think and how ethical hacking can make you a better developer. Stay tuned!</strong></p>
-    `,
+      <p><strong>Next time, we’ll dive deeper into how hackers think and how ethical hacking can make you a better developer. Stay tuned!</strong></p>`,
   },
   {
     slug: "networking-basics-lan-vlan",
@@ -178,10 +221,8 @@ const blogPosts = [
     date: "April 05, 2026",
     content: `
       <p>Imagine a large office where everyone is shouting in one room. It's chaotic, right? That’s exactly what a <strong>Flat Network (LAN)</strong> without segmentation looks like. In cybersecurity, we don't just build networks; we secure them.</p>
-
       <h3>What is a LAN?</h3>
       <p>A <strong>Local Area Network (LAN)</strong> connects devices in a limited area like your home or office. It allows them to share files, printers, and internet. But there's a problem: if one device is hacked, the hacker can easily move "laterally" to any other device on that LAN.</p>
-
       <h3>Why do we need VLANs?</h3>
       <p><strong>Virtual Local Area Networks (VLANs)</strong> allow us to split one physical switch into multiple logical networks. Here’s why they are essential:</p>
       <ul>
@@ -189,9 +230,7 @@ const blogPosts = [
         <li><strong>Performance:</strong> By reducing broadcast traffic, the network runs faster.</li>
         <li><strong>Organization:</strong> You can group users by department (Finance, IT, Sales) regardless of where they are sitting.</li>
       </ul>
-
-      <p><strong>Pro Tip:</strong> As a security professional, always follow the principle of least privilege—only allow necessary VLANs to communicate through a firewall.</p>
-    `
+      <p><strong>Pro Tip:</strong> As a security professional, always follow the principle of least privilege—only allow necessary VLANs to communicate through a firewall.</p>`
   },
   {
     slug: "iso-27001-basics-guide",
@@ -200,17 +239,14 @@ const blogPosts = [
     date: "April 10, 2026",
     content: `
       <p>If you've heard the term <strong>ISMS (Information Security Management System)</strong>, you've heard of ISO 27001. But what is it exactly, and why should you care?</p>
-
       <h3>What is ISO 27001?</h3>
       <p>ISO/IEC 27001 is an international standard that provides a framework for managing sensitive company information so that it remains secure. It’s not just about IT; it involves people, processes, and technology.</p>
-
       <h3>Why do Companies need it?</h3>
       <ul>
         <li><strong>Trust:</strong> It proves to clients that you take their data seriously.</li>
         <li><strong>Legal Compliance:</strong> Helps in meeting GDPR and other regulatory requirements.</li>
         <li><strong>Risk Management:</strong> It forces you to identify vulnerabilities before they are exploited.</li>
       </ul>
-
       <h3>How to Implement it? (The Basics)</h3>
       <ol>
         <li><strong>Define Scope:</strong> Decide what needs protection (e.g., the whole company or just one department).</li>
@@ -218,9 +254,7 @@ const blogPosts = [
         <li><strong>Implement Controls:</strong> Use Annex A controls (like Access Control, Cryptography, or Physical Security) to mitigate risks.</li>
         <li><strong>Internal Audit:</strong> Check if your system is working as planned.</li>
       </ol>
-
-      <p><strong>Conclusion:</strong> ISO 27001 isn't a one-time project; it's a cycle of continuous improvement (PDCA: Plan-Do-Check-Act).</p>
-    `
+      <p><strong>Conclusion:</strong> ISO 27001 isn't a one-time project; it's a cycle of continuous improvement (PDCA: Plan-Do-Check-Act).</p>`
   }
 ];
 
@@ -252,7 +286,7 @@ const BlogPost = () => {
           <Col lg={10}>
             <Card className="blog-post-card">
               <Card.Body>
-                {/* 2. Back Button */}
+                {/* Back Button */}
                 <Button
                   variant="link"
                   className="p-0 mb-4 text-decoration-none text-secondary"
@@ -261,16 +295,16 @@ const BlogPost = () => {
                   <FaArrowLeft className="me-2" /> Back to Portfolio
                 </Button>
 
-                {/* 3. Title with Side Bar */}
+                {/* Title */}
                 <h1 className="blog-post-title">{post.title}</h1>
 
-                {/* 4. Main Body */}
+                {/* Main Body */}
                 <div
                   className="blog-post-content"
                   dangerouslySetInnerHTML={{ __html: post.content }}
                 />
 
-                {/* 5. Share Buttons */}
+                {/* Share Buttons */}
                 <div className="share-section">
                   <Button className="cyber-btn-outline" onClick={() => window.open(`https://twitter.com/share?url=${window.location.href}`, "_blank")}>
                     <FaTwitter className="me-2" /> Twitter
@@ -279,11 +313,11 @@ const BlogPost = () => {
                     <FaFacebook className="me-2" /> Facebook
                   </Button>
                   <Button className="cyber-btn-outline" onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`, "_blank")}>
-                  <FaLinkedin className="me-2" /> Linkedin
+                    <FaLinkedin className="me-2" /> Linkedin
                   </Button>
                 </div>
 
-                {/* 6. Navigation Controls */}
+                {/* Navigation Controls */}
                 <div className="nav-controls">
                   <Button
                     className="cyber-btn-outline"

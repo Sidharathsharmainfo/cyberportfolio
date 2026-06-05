@@ -6,6 +6,19 @@ import { FaLock, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./experience.css";
 
 const experiences = [
+  //  { 
+  //   title: "Cybersecurity Auditor", 
+  //   company: "Warren & Carter Technologies", 
+  //   duration: "April 2026 - Present", 
+  //   shortDesc: "Led ISO 27001, SOC 2 & NIST 800-53 audits — 30% gap reduction", 
+  //   fullDetails: [
+  //     "Conducted multi-framework internal audits (ISO 27001, SOC 2, NIST SP 800-53) across 500+ endpoints.",
+  //     "Administered Vanta GRC platform for automated evidence collection.",
+  //     "Enforced Access Control policies via Active Directory (AD DS) and GPO hardening.",
+  //     "Designed phishing simulation campaigns — 35% reduction in risk incidents.",
+  //     "Authored ISO 27001 policy suite: InfoSec, Access Control, and Audit Logging."
+  //   ] 
+  // },
   { 
     title: "Cybersecurity Auditor", 
     company: "Etech Global Services", 
