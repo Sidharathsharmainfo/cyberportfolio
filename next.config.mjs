@@ -3,32 +3,37 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // Saare application paths par ye headers apply honge
         source: '/((?!api|_next/static|_next/image|favicon.ico).*)',
         headers: [
           {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self';",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com;", // Vercel Analytics allowed
-              "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;", // Bootstrap CDN safety
+              // 1. STRICTOR SCRIPT: 'unsafe-inline' aur 'unsafe-eval' ko hata diya taaki Mozilla pass ho jaye
+              "script-src 'self' https://va.vercel-scripts.com;", 
+              // 2. FONT FIX: Google Fonts ke CSS link ko allow kiya
+              "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;", 
               "img-src 'self' data: blob:;",
-              "font-src 'self' data: https://cdn.jsdelivr.net;",
-              "connect-src 'self' https://vitals.vercel-analytics.com https://api.ipify.org;", // Analytics and IP API mapping
-              "frame-ancestors 'none';", // X-Frame-Options ka modern replacement (Clickjacking protection)
+              // 3. FONT FIX: Google Fonts ke actual font files (.woff2) ko allow kiya
+              "font-src 'self' data: https://cdn.jsdelivr.net https://fonts.gstatic.com;", 
+              "connect-src 'self' https://vitals.vercel-analytics.com https://api.ipify.org;", 
+              "object-src 'none';", // Strictness policy for assets
+              "frame-ancestors 'none';", 
+              "base-uri 'self';",
+              "form-action 'self';"
             ].join(' '),
           },
           {
             key: 'X-Frame-Options',
-            value: 'DENY', // Protection against Clickjacking on older browsers
+            value: 'DENY',
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff', // MIME sniffing exploit protection
+            value: 'nosniff',
           },
           {
             key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin', // Privacy validation for outgoing links
+            value: 'strict-origin-when-cross-origin',
           }
         ],
       },
