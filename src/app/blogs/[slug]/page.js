@@ -7,6 +7,63 @@ import "./blogpost.css";
 
 // Blog Data
 const blogPosts = [
+{
+    slug: "how-hackers-steal-accounts",
+    title: "How Attackers Get Your Accounts (and How to Stop Them)",
+    content: `
+      <p>To a lot of people, cybersecurity sounds like some complex, action-movie puzzle. The truth is, it's usually much more straightforward. Attackers typically get into your stuff by exploiting common human mistakes rather than cracking super-strong technical defenses.</p>
+
+      <p>Think of it like a house burglary. Most break-ins happen because of three simple things:</p>
+      
+      <ol>
+        <li>You wandered into a dangerous neighborhood (**Visiting Malicious or Bad Websites**).</li>
+        <li>You answered the door without checking who was there (**Clicking Dodgy Links**).</li>
+        <li>You left the door wide open (**Weak Passwords and Misconfigured Settings**).</li>
+      </ol>
+
+      <div class="custom-divider my-4"></div>
+
+      <h3>The Easiest Way In: Attacking Your Device, Not Your Router</h3>
+      <p>It's a common misconception that hackers have to break into your home Wi-Fi network. That's usually way too much work! Modern attackers prefer the easy route. Trying to smash through a strong perimeter router is tough and often blocked by default inbound firewall rules.</p>
+      
+      <p>So instead, they set up a server on the internet and trick you into visiting it. When you click on that phishing link or download that sketchy app, your device is making an <strong>outbound connection</strong> to their server.</p>
+      
+      <p>Since your device requested the information, your network lets it back in. Once downloaded, your browser or computer processes it, and suddenly they have what they need, or maybe even a way to get your login details. They didn't have to break in; you just handed them the key!</p>
+
+      <h3>The Attack Structure: Brute-Force Explained</h3>
+      <p>How quickly an attacker can steal your account really depends on how strong your password is. If your password is just your pet's name or a birthday, it's incredibly easy for a computer to guess.</p>
+      
+      <p>They'll do something called a <strong>Brute-Force Attack</strong>. First, they'll gather information about you online from places like social media (this is called <strong>OSINT</strong> or Open-Source Intelligence) and build a list of thousands of potential passwords for you (a "Wordlist"). Then, they'll use a special program (like <strong>Hashcat</strong> or <strong>John the Ripper</strong>) to try every single one of those passwords against your account, one after another.</p>
+
+      <div class="highlight-box my-4 p-3" style="background: #111; border-left: 4px solid #fff;">
+        <p class="mb-0"><strong>What's a Brute-Force Attack?</strong><br/>
+        It's basically a computer program automatically trying millions of password combinations until it finds one that works. They use their computer's power to cycle through combinations super fast, like hundreds of millions per second!</p>
+      </div>
+
+      <h3>The Truth About Password Managers: Are They Really Safe?</h3>
+      <p>One question I hear a lot is: <em>"How am I supposed to remember a 16-character password for every single site? And if I use a password manager like Bitwarden, what happens if they get hacked?"</em></p>
+      
+      <p>The answer is, they're generally very safe! Good password managers don't just store your passwords as plain text. Instead, they encrypt them using strong algorithms (like <strong>AES-256</strong>) and a <strong>zero-knowledge system</strong>.</p>
+      
+      <p>When you set up your account, everything is encrypted locally on your device before it even goes to their servers. So, even if someone got ahold of their database, all they'd have is gibberish. They wouldn't be able to unlock your passwords without your master password to derive the decryption key.</p>
+
+      <h3>Your Ultimate Cybersecurity Checklist: Strong Defenses at Home</h3>
+      <p>Cybersecurity is really all about minimizing risks proactively. If you follow these four basic steps, you'll shut down most common attacks:</p>
+      
+      <ul>
+        <li><strong>Rule 1: Make Passwords Super Strong</strong><br/>
+        Don't use anything easy to guess like a common word, pattern, or personal detail. Aim for a phrase at least 14-16 characters long with uppercase and lowercase letters, numbers, and symbols. Something like: <code>Thisismyawesomecomputerin2026!</code>. This is easy for you to remember and extremely difficult for a computer to guess quickly. Keep it in a password manager!</li>
+        <li><strong>Rule 2: Don't Trust Links/Attachments</strong><br/>
+        Never click on links or open attachments from unknown senders, no matter how official or urgent they seem. If it feels off, it probably is.</li>
+        <li><strong>Rule 3: Use VirusTotal (But Be Smart About It)</strong><br/>
+        Before opening an unknown file or visiting a weird link, copy its path and paste it into <a href="https://www.virustotal.com/" target="_blank" rel="noopener noreferrer">VirusTotal</a>. It checks against many antivirus engines. However, a clean scan doesn't guarantee something is safe, especially with new threats (zero-day vulnerabilities).</li>
+        <li><strong>Rule 4: Secure Your Router</strong><br/>
+        Most home routers come with default login details like <code>admin/admin</code> that everyone knows. Log into your router's settings immediately and change the admin username and password! Make sure your Wi-Fi is using <strong>WPA3</strong> (if supported) or at least <strong>WPA2</strong> with a super-strong, unique Wi-Fi password.</li>
+      </ul>
+
+      <h3>The Takeaway</h3>
+      <p>Most security incidents aren't caused by some super-hacker breaching your network. It's usually due to security gaps and human error. By being diligent, using strong passwords, and securing your devices properly, you become an extremely difficult target to attack. Stay safe out there!</p>`
+},
   {
     slug: "anatomy-of-a-recruitment-phishing-scam",
     title: "Anatomy of a LinkedIn Recruitment Scam: A GRC Auditor's OSINT Investigation",

@@ -1,7 +1,7 @@
 "use client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from "react";
-
+import { Analytics } from "@vercel/analytics/next"
 import  { Headernavbar } from "./components/header";
 import HomePage from "./home/page";
 import AboutSection from "./about/page";
@@ -54,7 +54,7 @@ export default function Home() {
       <BlogSection />
       <Footer /> 
       {/* <SkillsSection /> */}
-      
+      <Analytics />
       
     </div>
   );
