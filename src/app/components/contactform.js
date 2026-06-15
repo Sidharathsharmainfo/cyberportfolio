@@ -53,10 +53,26 @@ export const ContactForm = ({ showModal, handleClose }) => {
           handleClose();
         }, 2000);
       })
-      .catch(() => {
-        setStatus('ERROR: UPLINK_FAILED');
-        generateCaptcha();
-      });
+      // .catch(() => {
+      //   setStatus('ERROR: UPLINK_FAILED');
+      //   generateCaptcha();
+      // });
+
+      .catch((error) => {
+  console.error("EmailJS Error:", error);
+
+  setStatus(
+    `ERROR: ${
+      error?.text ||
+      error?.message ||
+      JSON.stringify(error) ||
+      "UPLINK_FAILED"
+    }`
+  );
+
+  generateCaptcha();
+});
+
   };
 
   return (
