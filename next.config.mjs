@@ -3,32 +3,22 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/((?!api|_next/static|_next/image|favicon.ico).*)",
+        source: "/(.*)",
         headers: [
           {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-
-              // Next.js
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com",
-
-              // Styles
+              "script-src 'self' https://va.vercel-scripts.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-
-              // Fonts
-              "font-src 'self' data: https://fonts.gstatic.com",
-
-              // Images
+              "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: blob: https:",
-
-              // APIs + EmailJS + Next.js dev websocket
-              "connect-src 'self' https://vitals.vercel-analytics.com https://api.ipify.org https://api.emailjs.com ws: wss:",
-
+              "connect-src 'self' https://api.emailjs.com https://api.ipify.org https://vitals.vercel-analytics.com",
               "object-src 'none'",
-              "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",
+              "frame-ancestors 'none'",
+              "upgrade-insecure-requests",
             ].join("; "),
           },
           {

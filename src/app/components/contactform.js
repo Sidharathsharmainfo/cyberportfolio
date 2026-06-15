@@ -18,7 +18,7 @@ export const ContactForm = ({ showModal, handleClose }) => {
     const num2 = Math.floor(Math.random() * 5) + 1;
     const ops = ['+', '-', '*'];
     const op = ops[Math.floor(Math.random() * ops.length)];
-    
+
     let ans = 0;
     if (op === '+') ans = num1 + num2;
     if (op === '-') ans = num1 - num2;
@@ -59,19 +59,18 @@ export const ContactForm = ({ showModal, handleClose }) => {
       // });
 
       .catch((error) => {
-  console.error("EmailJS Error:", error);
+        console.error("EmailJS Error:", error);
 
-  setStatus(
-    `ERROR: ${
-      error?.text ||
-      error?.message ||
-      JSON.stringify(error) ||
-      "UPLINK_FAILED"
-    }`
-  );
+        setStatus(
+          `ERROR: ${error?.text ||
+          error?.message ||
+          JSON.stringify(error) ||
+          "UPLINK_FAILED"
+          }`
+        );
 
-  generateCaptcha();
-});
+        generateCaptcha();
+      });
 
   };
 
@@ -93,7 +92,7 @@ export const ContactForm = ({ showModal, handleClose }) => {
                 type="text"
                 name="name"
                 value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="Name"
                 required
                 className="cyber-input"
@@ -106,7 +105,7 @@ export const ContactForm = ({ showModal, handleClose }) => {
                 type="email"
                 name="email"
                 value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 placeholder="email@provider.com"
                 required
                 className="cyber-input"
@@ -119,7 +118,7 @@ export const ContactForm = ({ showModal, handleClose }) => {
                 as="textarea"
                 name="message"
                 value={formData.message}
-                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows={3}
                 placeholder="Message body..."
                 required
@@ -141,7 +140,7 @@ export const ContactForm = ({ showModal, handleClose }) => {
 
             <AnimatePresence>
               {status && (
-                <motion.p initial={{opacity:0}} animate={{opacity:1}} className="status-terminal">
+                <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="status-terminal">
                   {`> ${status}`}
                 </motion.p>
               )}
