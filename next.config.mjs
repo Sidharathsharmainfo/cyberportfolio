@@ -9,15 +9,21 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' https://va.vercel-scripts.com",
+
+              // Required for Next.js + React + Vercel Analytics
+              "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "font-src 'self' https://fonts.gstatic.com data:",
+              "font-src 'self' data: https://fonts.gstatic.com",
               "img-src 'self' data: blob: https:",
+
+              // EmailJS
               "connect-src 'self' https://api.emailjs.com https://api.ipify.org https://vitals.vercel-analytics.com",
+
               "object-src 'none'",
               "base-uri 'self'",
-              "form-action 'self'",
               "frame-ancestors 'none'",
+              "form-action 'self'",
               "upgrade-insecure-requests",
             ].join("; "),
           },

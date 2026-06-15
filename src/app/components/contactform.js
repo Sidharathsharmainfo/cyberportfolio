@@ -59,18 +59,9 @@ export const ContactForm = ({ showModal, handleClose }) => {
       // });
 
       .catch((error) => {
-        console.error("EmailJS Error:", error);
-
-        setStatus(
-          `ERROR: ${error?.text ||
-          error?.message ||
-          JSON.stringify(error) ||
-          "UPLINK_FAILED"
-          }`
-        );
-
-        generateCaptcha();
-      });
+  console.error("EMAILJS ERROR:", error);
+  alert(JSON.stringify(error));
+});
 
   };
 
