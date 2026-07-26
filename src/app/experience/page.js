@@ -6,111 +6,111 @@ import { FaLock, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./experience.css";
 
 const experiences = [
-   { 
-    title: "Cybersecurity Auditor", 
-    company: "Warren & Carter Technologies", 
-    duration: "April 2026 - Present", 
+  {
+    title: "Cybersecurity Auditor",
+    company: "Warren & Carter Technologies",
+    duration: "April 2026 - Present",
     shortDesc: "Audits systems for ISO 27001/NIST compliance, manages risk registers,",
     fullDetails: [
-      "Conduct comprehensive risk assessments, maintain enterprise risk registers, and evaluate third-party/vendor security postures to mitigate external exposures.",
-      "Perform rigorous internal audits and system reviews to ensure strict compliance with standard industry frameworks, specifically ISO 27001 and NIST.",
-      "Execute vulnerability scans, oversee penetration testing, and review technical security controls across firewalls, IAM, network devices, and infrastructure systems.",
-      "Enforce security governance policies, conduct employee awareness training, and support incident response and remediation activities.",
-    ] 
+      "Maintain an enterprise risk register spanning 5+ security and vendor risk policies, running risk assessments and third-party/vendor security reviews to reduce external exposure.",
+      "Conduct internal audits and system reviews across 50+ systems to ensure compliance with ISO 27001 and NIST frameworks, closing 80+ audit findings to date.",
+      "Run vulnerability scans and review technical security controls across firewalls, IAM, network devices, and infrastructure systems, supporting penetration testing coordination.",
+      "Enforce security governance policies, run employee security awareness training, and support incident response and remediation activities.",
+    ]
   },
-  { 
-    title: "Cybersecurity Auditor", 
-    company: "Etech Global Services", 
-    duration: "May 2025 - Feb 2026", 
-    shortDesc: "Led ISO 27001, SOC 2 & NIST 800-53 audits — 30% gap reduction", 
+  {
+    title: "Cybersecurity Auditor",
+    company: "Etech Global Services",
+    duration: "May 2025 - Feb 2026",
+    shortDesc: "Led ISO 27001, SOC 2 & NIST 800-53 audits — 30% gap reduction",
     fullDetails: [
-      "Conducted multi-framework internal audits (ISO 27001, SOC 2, NIST SP 800-53) across 500+ endpoints.",
+      "Conducted multi-framework internal audits (ISO 27001, SOC 2, NIST SP 800-53) across 7 departments and 35+ systems.",
       "Administered Vanta GRC platform for automated evidence collection.",
-      "Enforced Access Control policies via Active Directory (AD DS) and GPO hardening.",
-      "Designed phishing simulation campaigns — 35% reduction in risk incidents.",
-      "Authored ISO 27001 policy suite: InfoSec, Access Control, and Audit Logging."
-    ] 
+      "Enforced access control policies via Active Directory (AD DS) and GPO hardening.",
+      "Designed and ran phishing simulation campaigns to reduce employee-driven risk incidents.",
+      "Authored 2 ISO 27001-aligned policy proposals covering InfoSec and access control.",
+    ]
   },
-  { 
-    title: "Cyber Security Intern", 
-    company: "Etech Global Services", 
-    duration: "Feb 2025 - May 2025", 
-    shortDesc: "Endpoint audits, vulnerability scanning & risk documentation.", 
+  {
+    title: "Cyber Security Intern",
+    company: "Etech Global Services",
+    duration: "Feb 2025 - May 2025",
+    shortDesc: "Endpoint audits, vulnerability scanning & risk documentation.",
     fullDetails: [
       "Completed endpoint and system audits — identified and corrected misconfigured assets.",
       "Investigated vulnerabilities using Nmap, Nessus, and Metasploit; delivered recommendations.",
       "Improved technical documentation for internal risk assessments and policy reviews."
-    ] 
+    ]
   },
-  { 
-    title: "Graduate Teaching Assistant", 
-    company: "Stephen F Austin State University", 
-    duration: "Jan 2024 - Dec 2024", 
-    shortDesc: "Taught cybersecurity fundamentals & web development.", 
+  {
+    title: "Graduate Teaching Assistant",
+    company: "Stephen F Austin State University",
+    duration: "Jan 2024 - Dec 2024",
+    shortDesc: "Taught cybersecurity fundamentals & web development.",
     fullDetails: [
       "Delivered cybersecurity instruction — CIA triad, network security, and secure architecture.",
       "Supervised lab sessions, monitored exams, and graded technical assignments.",
       "Taught front-end web development fundamentals (HTML, CSS)."
-    ] 
+    ]
   },
-  { 
-    title: "Sr. Frontend Developer", 
-    company: "Hypotenuse Corporation Pvt. Ltd", 
-    duration: "Aug 2020 - Dec 2023", 
-    shortDesc: "Built secure web apps with OWASP Top 10 practices.", 
+  {
+    title: "Sr. Frontend Developer",
+    company: "Hypotenuse Corporation Pvt. Ltd",
+    duration: "Aug 2020 - Dec 2023",
+    shortDesc: "Built secure web apps with OWASP Top 10 practices.",
     fullDetails: [
       "Implemented secure coding practices aligned with OWASP Top 10.",
       "Improved application load times by ~40% through performance optimization.",
       "Collaborated with cross-functional teams to deliver security-focused web solutions."
-    ] 
+    ]
   }
 ];
 
 const projects = [
-  { 
-    title: "Novapay FinTech — ISO 27001:2022 Implementation", 
+  {
+    title: "Novapay FinTech — ISO 27001:2022 Implementation",
     icon: <FaLock />,
-    shortDesc: "End-to-end ISO 27001 ISMS deployed for a simulated FinTech company.", 
+    shortDesc: "End-to-end ISO 27001 ISMS deployed for a simulated FinTech company.",
     fullDetails: [
       "Configured Windows Server 2025 as Domain Controller with RBAC groups.",
       "Created 6 GPOs: baseline security, password policy, and USB controls.",
       "Deployed auditd on Ubuntu Server to capture failed SSH logins.",
       "Authored full policy suite: Information Security Policy, ISMS Scope, etc.",
       "Tech: ISO 27001 · Windows Server 2025 · AD DS · Ubuntu · auditd"
-    ] 
+    ]
   },
-  { 
-    title: "Linux Honeypot Server (Cowrie)", 
+  {
+    title: "Linux Honeypot Server (Cowrie)",
     icon: <FaLock />,
-    shortDesc: "Deployed SSH honeypot to monitor attacker behavior.", 
+    shortDesc: "Deployed SSH honeypot to monitor attacker behavior.",
     fullDetails: [
       "Deployed Cowrie SSH honeypot on Ubuntu for real-time attack analysis.",
       "Logged attacker TTPs, session behavior, and command patterns.",
       "Visualized attack data and geographic origins using Kibana dashboards.",
       "Tech: Cowrie · Ubuntu · Kibana · SSH · Threat Intelligence"
-    ] 
+    ]
   },
-  { 
-    title: "Firewall Evasion Analysis", 
+  {
+    title: "Firewall Evasion Analysis",
     icon: <FaLock />,
-    shortDesc: "Simulated DNS tunneling to identify firewall bypass vulnerabilities.", 
+    shortDesc: "Simulated DNS tunneling to identify firewall bypass vulnerabilities.",
     fullDetails: [
       "Simulated advanced bypass techniques using CTI methodology.",
       "Tested DNS tunneling and port knocking against Windows 10 Firewall.",
       "Identified vulnerabilities and documented concrete mitigation steps.",
       "Tech: Nmap · Metasploit · Shodan · pfSense · CTI"
-    ] 
+    ]
   },
-  { 
-    title: "USB Forensics Investigation", 
+  {
+    title: "USB Forensics Investigation",
     icon: <FaLock />,
-    shortDesc: "Investigated USB-based data exfiltration using Autopsy.", 
+    shortDesc: "Investigated USB-based data exfiltration using Autopsy.",
     fullDetails: [
       "Investigated unauthorized USB data transfers and exfiltration scope.",
       "Analyzed file artifacts and metadata using Autopsy forensics tool.",
       "Reconstructed attacker methodology and documented forensic evidence.",
       "Tech: Autopsy · Kali Linux · Digital Forensics"
-    ] 
+    ]
   }
 ];
 
@@ -142,12 +142,12 @@ export const ExperienceAndProjectsSection = () => {
             <button onClick={() => scroll("right")} className="arrow-btn"><FaChevronRight /></button>
           </div>
         </div>
-        
+
         <div className="experience-carousel" ref={scrollRef}>
           {experiences.map((exp, index) => (
-            <motion.div 
-              key={index} 
-              className="exp-card" 
+            <motion.div
+              key={index}
+              className="exp-card"
               onClick={() => setSelectedItem(exp)}
               whileHover={{ y: -8, borderColor: "#555" }}
               whileTap={{ scale: 0.98 }}
@@ -167,9 +167,9 @@ export const ExperienceAndProjectsSection = () => {
         <Row>
           {currentProjects.map((project, index) => (
             <Col lg={4} md={6} key={index} className="mb-4">
-              <motion.div 
-                className="project-card-v2" 
-                whileHover={{ y: -10, boxShadow: "0px 10px 30px rgba(255,255,255,0.1)" }} 
+              <motion.div
+                className="project-card-v2"
+                whileHover={{ y: -10, boxShadow: "0px 10px 30px rgba(255,255,255,0.1)" }}
                 onClick={() => setSelectedItem(project)}
               >
                 <div className="p-card-icon">{project.icon}</div>
@@ -185,8 +185,8 @@ export const ExperienceAndProjectsSection = () => {
 
         <div className="pagination-container text-center mt-3">
           {Array.from({ length: totalPages }, (_, i) => (
-            <button 
-              key={i} 
+            <button
+              key={i}
               className={`pag-dot ${currentPage === i + 1 ? "active" : ""}`}
               onClick={() => setCurrentPage(i + 1)}
             >
