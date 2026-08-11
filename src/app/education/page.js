@@ -19,7 +19,7 @@ const allCertifications = [
     date: "Feb 2026",
     type: "modal", 
     // Updated Path
-    pdfUrl: "/images/certifications/certificate.pdf" 
+    pdfUrl: "/pdf/Certificate.pdf" 
   },
   { 
     title: "Fortinet Certified Associate – Cybersecurity", 
