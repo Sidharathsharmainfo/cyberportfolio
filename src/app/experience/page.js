@@ -7,7 +7,7 @@ import "./experience.css";
 
 const experiences = [
   {
-    title: "Cybersecurity Auditor",
+    title: "Cybersecurity Auditor (GRC Analyst)",
     company: "Warren & Carter Technologies",
     duration: "April 2026 - Present",
     shortDesc: "Audits systems for ISO 27001/NIST compliance, manages risk registers,",
