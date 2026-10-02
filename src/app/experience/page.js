@@ -12,10 +12,9 @@ const experiences = [
     duration: "April 2026 - Present",
     shortDesc: "Audits systems for ISO 27001/NIST compliance, manages risk registers,",
     fullDetails: [
-      "Maintain an enterprise risk register spanning 5+ security and vendor risk policies, running risk assessments and third-party/vendor security reviews to reduce external exposure.",
-      "Conduct internal audits and system reviews across 50+ systems to ensure compliance with ISO 27001 and NIST frameworks, closing 80+ audit findings to date.",
-      "Run vulnerability scans and review technical security controls across firewalls, IAM, network devices, and infrastructure systems, supporting penetration testing coordination.",
-      "Enforce security governance policies, run employee security awareness training, and support incident response and remediation activities.",
+      "Own and maintain the organizational risk register. Conduct internal audits and IAM access reviews across 50+ systems.",
+      "Lead ISO 27001 readiness and control-effectiveness testing.",
+      "Track and close audit findings with management reporting",
     ]
   },
   {
@@ -24,11 +23,9 @@ const experiences = [
     duration: "May 2025 - Feb 2026",
     shortDesc: "Led ISO 27001, SOC 2 & NIST 800-53 audits — 30% gap reduction",
     fullDetails: [
-      "Conducted multi-framework internal audits (ISO 27001, SOC 2, NIST SP 800-53) across 7 departments and 35+ systems.",
-      "Administered Vanta GRC platform for automated evidence collection.",
-      "Enforced access control policies via Active Directory (AD DS) and GPO hardening.",
-      "Designed and ran phishing simulation campaigns to reduce employee-driven risk incidents.",
-      "Authored 2 ISO 27001-aligned policy proposals covering InfoSec and access control.",
+      "Drafted NIST and ISO-aligned governance and vendor risk policies.",
+      "Conducted internal audits across multiple departments",
+      "Performed control testing and ISO 27001 readiness assessments, closing 70+ findings.",
     ]
   },
   {
@@ -37,8 +34,7 @@ const experiences = [
     duration: "Feb 2025 - May 2025",
     shortDesc: "Endpoint audits, vulnerability scanning & risk documentation.",
     fullDetails: [
-      "Completed endpoint and system audits — identified and corrected misconfigured assets.",
-      "Investigated vulnerabilities using Nmap, Nessus, and Metasploit; delivered recommendations.",
+      "Performed endpoint and system audits, vulnerability assessments using Nessus and Nmap, and produced risk assessment reports for senior management.",
       "Improved technical documentation for internal risk assessments and policy reviews."
     ]
   },
@@ -72,6 +68,7 @@ const projects = [
     icon: <FaLock />,
     shortDesc: "End-to-end ISO 27001 ISMS deployed for a simulated FinTech company.",
     fullDetails: [
+      "Designed and governed a complete ISO/IEC 27001:2022 ISMS covering all 10 clauses and Annex A controls, including risk assessment, access control policy, and audit monitoring documentation.",
       "Configured Windows Server 2025 as Domain Controller with RBAC groups.",
       "Created 6 GPOs: baseline security, password policy, and USB controls.",
       "Deployed auditd on Ubuntu Server to capture failed SSH logins.",
@@ -82,7 +79,7 @@ const projects = [
   {
     title: "Linux Honeypot Server (Cowrie)",
     icon: <FaLock />,
-    shortDesc: "Deployed SSH honeypot to monitor attacker behavior.",
+    shortDesc: "Deployed Cowrie SSH honeypot on Ubuntu to monitor unauthorized access attempts and visualized attack patterns for risk reporting",
     fullDetails: [
       "Deployed Cowrie SSH honeypot on Ubuntu for real-time attack analysis.",
       "Logged attacker TTPs, session behavior, and command patterns.",
@@ -93,7 +90,7 @@ const projects = [
   {
     title: "Firewall Evasion Analysis",
     icon: <FaLock />,
-    shortDesc: "Simulated DNS tunneling to identify firewall bypass vulnerabilities.",
+    shortDesc: "Simulated firewall bypass techniques (DNS tunneling, port knocking) to identify control gaps and documented risk findings with recommended mitigations",
     fullDetails: [
       "Simulated advanced bypass techniques using CTI methodology.",
       "Tested DNS tunneling and port knocking against Windows 10 Firewall.",

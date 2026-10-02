@@ -59,21 +59,26 @@ export default function AboutSection() {
                             <h3 className="sub-title">PROFESSIONAL PROFILE</h3>
                             <div className="summary-text mb-5">
                                 <p className="highlight-para">
-                                    I am <strong>Sidharath Sharma</strong>, a Cybersecurity Analyst specializing in GRC and a CQI & IRCA Certified ISO/IEC 27001:2022 Lead Auditor.
+                                    I am <strong>Sidharath Sharma</strong>, a GRC-focused Cybersecurity Analyst and
+                                    CQI & IRCA Certified ISO/IEC 27001:2022 Lead Auditor.
                                 </p>
                                 <p>
-                                    I bridge the gap between regulatory mandates and technical security. I have a proven track record of reducing compliance gaps by 30% through risk-driven controls and strategic auditing.
+                                    I bridge regulatory requirements with technical controls. I have hands-on 
+                                    experience maintaining risk registers, conducting internal audits, performing 
+                                    control testing, and tracking remediation across ISO 27001 and NIST frameworks.
+                                    I have contributed to reducing compliance gaps and strengthening governance through
+                                     structured risk assessments and evidence-based reporting.
                                 </p>
                             </div>
 
-                            <h3 className="sub-title">WHY CHOOSE ME?</h3>
+                            <h3 className="sub-title">Core Strengths</h3>
                             <Row className="g-3">
                                 <Col md={6}>
                                     <div className="hire-card">
                                         <FaShieldAlt className="hire-icon" />
                                         <div>
                                             <h5>Audit-Ready Expertise</h5>
-                                            <p>Certified Lead Auditor with hands-on experience in full ISMS lifecycles.</p>
+                                            <p>Full ISMS lifecycle experience including ISO 27001 readiness audits and Annex A control mapping.</p>
                                         </div>
                                     </div>
                                 </Col>
@@ -81,8 +86,8 @@ export default function AboutSection() {
                                     <div className="hire-card">
                                         <FaChartLine className="hire-icon" />
                                         <div>
-                                            <h5>Risk-Driven Strategy</h5>
-                                            <p>Reduced incidents by 35% using NIST-based risk assessment models.</p>
+                                            <h5>Risk-Driven Approach</h5>
+                                            <p>Risk register ownership, risk scoring, and treatment planning aligned to NIST and ISO standards</p>
                                         </div>
                                     </div>
                                 </Col>
@@ -91,7 +96,7 @@ export default function AboutSection() {
                                         <FaCheckCircle className="hire-icon" />
                                         <div>
                                             <h5>Technical GRC</h5>
-                                            <p>Expertise in Vanta, Sentinel, and Nessus for continuous compliance.</p>
+                                            <p>Hands-on with Vanta, Microsoft Sentinel, Nessus, Active Directory, and GPO hardening</p>
                                         </div>
                                     </div>
                                 </Col>
@@ -100,7 +105,7 @@ export default function AboutSection() {
                                         <FaUserTie className="hire-icon" />
                                         <div>
                                             <h5>Business Alignment</h5>
-                                            <p>Implementing scalable controls that support growth and regulations.</p>
+                                            <p>Translating technical findings into clear management reports and remediation plans.</p>
                                         </div>
                                     </div>
                                 </Col>

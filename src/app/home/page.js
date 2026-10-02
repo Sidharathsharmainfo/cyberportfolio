@@ -20,7 +20,7 @@ export default function HomePage() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          “SECURING THE FUTURE WITH PASSION AND EXPERTISE”
+          "Securing Organizations Through Governance, Risk & Compliance"
         </motion.h1>
 
         <motion.div
@@ -30,15 +30,15 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <p className="sub_headline">
-            Helping organizations build audit-ready compliance programs that earn 
-            and keep client trust. CQI & IRCA Certified ISO/IEC 27001:2022 Lead 
-            Auditor with hands-on GRC experience across NIST SP 800-53, SOC 2, 
+            CQI & IRCA Certified ISO/IEC 27001:2022 Lead Auditor | GRC Analyst
+            Specializing in ISO 27001, NIST SP 800-53, SOC 2, risk registers, control testing, and audit remediation.
+            Helping organizations build audit-ready compliance programs that reduce risk and earn client trust. 
             and Vanta.
           </p>
           
           <div className="contact_strip">
              <a href="tel:4252879880" className="contact_link">
-               <FaPhoneAlt className="me-1" /> (425) 287-9880
+               <FaPhoneAlt className="me-1" /> (425) 287-9980
              </a>
              <span className="divider">|</span>
              <a href="mailto:sidharathsharmainfo@gmail.com" className="contact_link">
@@ -55,7 +55,7 @@ export default function HomePage() {
           </div>
           
           <div className="status_tag">
-             <FaUniversity className="me-2" /> STEM OPT Authorized
+             <FaUniversity className="me-2" /> STEM OPT Authorized | Open to Junior GRC Analyst & Information Security Analyst roles (US)
           </div>
         </motion.div>
       </motion.div>
